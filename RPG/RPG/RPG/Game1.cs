@@ -18,6 +18,7 @@ namespace RPG
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Texture2D sprite;
 
         public Game1()
         {
