@@ -11,6 +11,12 @@ using Microsoft.Xna.Framework.Media;
 
 namespace RPG
 {
+    enum Screen
+    {
+        StartScreen,
+        GameScreen,
+        GameOverScreen
+    }
     /// <summary>
     /// This is the main type for your game
     /// </summary>
@@ -18,7 +24,11 @@ namespace RPG
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        Texture2D sprite;
+
+        StartScreen startScreen;
+        GameScreen gameScreen;
+
+        Screen currentScreen;
 
         public Game1()
         {
@@ -49,6 +59,8 @@ namespace RPG
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+            startScreen = new StartScreen(this);
+            currentScreen = Screen.StartScreen;
         }
 
         /// <summary>
@@ -72,7 +84,19 @@ namespace RPG
                 this.Exit();
 
             // TODO: Add your update logic here
-
+            switch (currentScreen)
+            {
+                case Screen.StartScreen:
+                    if (startScreen != null)
+                        startScreen.Update();
+                    break;
+                case Screen.GameScreen:
+                    if (gameScreen != null)
+                        gameScreen.Update(gameTime);
+                    break;
+                case Screen.GameOverScreen:
+                    break;
+            }
             base.Update(gameTime);
         }
 
@@ -85,8 +109,29 @@ namespace RPG
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-
+            spriteBatch.Begin();
+            switch (currentScreen)
+            {
+                case Screen.StartScreen:
+                    if (startScreen != null)
+                        startScreen.Draw(spriteBatch);
+                    break;
+                case Screen.GameScreen:
+                    if (gameScreen != null)
+                        gameScreen.Draw(spriteBatch);
+                    break;
+                case Screen.GameOverScreen:
+                    break;
+            }
+            spriteBatch.End();
             base.Draw(gameTime);
+        }
+        public void StartGame()
+        {
+            gameScreen = new GameScreen(this);
+            currentScreen = Screen.GameScreen;
+
+            startScreen = null;
         }
     }
 }
