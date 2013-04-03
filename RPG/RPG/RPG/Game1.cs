@@ -59,6 +59,7 @@ namespace RPG
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+
             startScreen = new StartScreen(this);
             currentScreen = Screen.StartScreen;
         }

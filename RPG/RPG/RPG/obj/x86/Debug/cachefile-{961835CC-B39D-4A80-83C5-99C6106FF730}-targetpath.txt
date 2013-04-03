@@ -1,0 +1,3 @@
+Content\Scenes\GameOverScreen.xnb
+Content\Scenes\StartScreen.xnb
+Content\Sprites\player.xnb

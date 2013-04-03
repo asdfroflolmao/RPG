@@ -21,7 +21,7 @@ namespace RPG
         public StartScreen(Game1 game)
         {
             this.game = game;
-            texture = game.Content.Load<Texture2D>("StartScreen");
+            texture = game.Content.Load<Texture2D>(@"Scenes\StartScreen");
             lastState = Keyboard.GetState();
         }
 
