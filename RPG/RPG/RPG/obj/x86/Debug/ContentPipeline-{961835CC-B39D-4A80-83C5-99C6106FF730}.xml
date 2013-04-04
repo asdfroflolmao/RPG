@@ -2,22 +2,13 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>Scenes\GameOverScreen.png</Source>
-      <Name>Scenes\GameOverScreen</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\GameOverScreen.xnb</Output>
-      <Time>2013-04-03T01:38:12.8173066-04:00</Time>
-    </Item>
-    <Item>
       <Source>Scenes\StartScreen.png</Source>
       <Name>Scenes\StartScreen</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\StartScreen.xnb</Output>
-      <Time>2013-04-03T01:38:05.0418619-04:00</Time>
+      <Time>2013-04-04T15:53:24.7983345-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\player.png</Source>
@@ -27,6 +18,15 @@
       <Options>None</Options>
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\player.xnb</Output>
       <Time>2013-02-05T17:25:29.2879237-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Scenes\CombatScreen.png</Source>
+      <Name>Scenes\CombatScreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\CombatScreen.xnb</Output>
+      <Time>2013-04-04T15:58:39.42433-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

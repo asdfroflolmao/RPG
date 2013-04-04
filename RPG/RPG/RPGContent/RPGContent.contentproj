@@ -37,13 +37,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Scenes\GameOverScreen.png">
-      <Name>GameOverScreen</Name>
+    <Compile Include="Scenes\StartScreen.png">
+      <Name>StartScreen</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Scenes\StartScreen.png">
-      <Name>StartScreen</Name>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Scenes\CombatScreen.png">
+      <Name>CombatScreen</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

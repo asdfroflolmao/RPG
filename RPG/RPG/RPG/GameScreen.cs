@@ -20,6 +20,8 @@ namespace RPG
 
         Player player;
         Texture2D playerSprite;
+        Enemy enemy;
+        Texture2D enemySprite;
 
         KeyboardState lastState;
 
@@ -28,24 +30,27 @@ namespace RPG
             this.game = game;
             playerSprite = game.Content.Load<Texture2D>(@"Sprites\player");
             player = new Player(playerSprite);
+            enemySprite = game.Content.Load<Texture2D>(@"Sprites\player");
+            enemy = new Enemy(playerSprite);
         }
 
         public void Update(GameTime gameTime)
         {
             KeyboardState keyboardState = Keyboard.GetState();
 
-            if (keyboardState.IsKeyDown(Keys.Enter) && lastState.IsKeyUp(Keys.Enter))
+            if (player.playerRectangle.Intersects(enemy.enemyRectangle))// if player intersects enemy -> CombatScreen
             {
-                
+                game.CombatTime();
             }
 
             lastState = keyboardState;
-
+            player.Update(gameTime, game.GraphicsDevice);
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
             player.Draw(spriteBatch);
+            enemy.Draw(spriteBatch);
         }
     }
 }

@@ -15,7 +15,8 @@ namespace RPG
     {
         StartScreen,
         GameScreen,
-        GameOverScreen
+        GameOverScreen,
+        CombatScreen
     }
     /// <summary>
     /// This is the main type for your game
@@ -27,6 +28,7 @@ namespace RPG
 
         StartScreen startScreen;
         GameScreen gameScreen;
+        CombatScreen combatScreen;
 
         Screen currentScreen;
 
@@ -97,6 +99,10 @@ namespace RPG
                     break;
                 case Screen.GameOverScreen:
                     break;
+                case Screen.CombatScreen:
+                    if (combatScreen != null)
+                        combatScreen.Update();
+                    break;
             }
             base.Update(gameTime);
         }
@@ -121,6 +127,10 @@ namespace RPG
                     if (gameScreen != null)
                         gameScreen.Draw(spriteBatch);
                     break;
+                case Screen.CombatScreen:
+                    if (combatScreen != null)
+                        combatScreen.Draw(spriteBatch);
+                    break;
                 case Screen.GameOverScreen:
                     break;
             }
@@ -132,6 +142,18 @@ namespace RPG
             gameScreen = new GameScreen(this);
             currentScreen = Screen.GameScreen;
 
+            startScreen = null;
+        }
+        public void CombatTime()
+        {
+            combatScreen = new CombatScreen(this);
+            currentScreen = Screen.CombatScreen;
+
+            startScreen = null;
+        }
+        public void CombatEnd()
+        {
+            currentScreen = Screen.GameScreen;
             startScreen = null;
         }
     }
