@@ -29,7 +29,7 @@ namespace RPG
         private Rectangle enemyHealthRectangle;
         private Rectangle enemyHealthBackgroundRectangle;
         private int playerStartHp;
-        private int enemyStartHp;      
+        private int enemyStartHp;
 
         public CombatScreen(Game1 game, Player igplayer, Enemy igenemy)
         {
@@ -41,8 +41,8 @@ namespace RPG
             
             player = igplayer;
             playerStartHp = player.getHP();
-            playerHealthBackgroundRectangle = new Rectangle(game.GraphicsDevice.Viewport.Width / 2 - 50, game.GraphicsDevice.Viewport.Height / 2 - 55 - 20, 100, 20);
-            enemyHealthBackgroundRectangle = new Rectangle(game.GraphicsDevice.Viewport.Width / 2 - 50, game.GraphicsDevice.Viewport.Height / 2 - 255 - 20, 100, 20);
+            playerHealthBackgroundRectangle = new Rectangle(game.GraphicsDevice.Viewport.Width / 2 - 50, game.GraphicsDevice.Viewport.Height / 2 - 55 - Constants.hpBarHeight, Constants.hpBarWidth, 20);
+            enemyHealthBackgroundRectangle = new Rectangle(game.GraphicsDevice.Viewport.Width / 2 - 50, game.GraphicsDevice.Viewport.Height / 2 - 255 - Constants.hpBarHeight, Constants.hpBarWidth, 20);
 
             enemy = igenemy;
             enemyStartHp = enemy.getHP();
@@ -50,11 +50,11 @@ namespace RPG
 
         public void Update()
         {
-            int playerHpBarWidth = (player.getHP() * 100 / playerStartHp);
-            int enemyHpBarWidth = (enemy.getHP() * 100 / enemyStartHp);
+            int playerHpBarWidth = (player.getHP() * Constants.hpBarWidth / playerStartHp);
+            int enemyHpBarWidth = (enemy.getHP() * Constants.hpBarWidth / enemyStartHp);
 
-            playerHealthRectangle = new Rectangle(game.GraphicsDevice.Viewport.Width / 2 - 50, game.GraphicsDevice.Viewport.Height / 2 - 55 - 20, playerHpBarWidth, 20);
-            enemyHealthRectangle = new Rectangle(game.GraphicsDevice.Viewport.Width / 2 - 50, game.GraphicsDevice.Viewport.Height / 2 - 255 - 20, enemyHpBarWidth, 20);
+            playerHealthRectangle = new Rectangle(game.GraphicsDevice.Viewport.Width / 2 - 50, game.GraphicsDevice.Viewport.Height / 2 - 55 - Constants.hpBarHeight, playerHpBarWidth, 20);
+            enemyHealthRectangle = new Rectangle(game.GraphicsDevice.Viewport.Width / 2 - 50, game.GraphicsDevice.Viewport.Height / 2 - 255 - Constants.hpBarHeight, enemyHpBarWidth, 20);
 
             KeyboardState keyboardState = Keyboard.GetState();
 
