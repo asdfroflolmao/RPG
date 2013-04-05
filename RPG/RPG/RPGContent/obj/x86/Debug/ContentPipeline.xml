@@ -37,6 +37,24 @@
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\GameScreen.xnb</Output>
       <Time>2013-04-04T23:50:28.2979017-04:00</Time>
     </Item>
+    <Item>
+      <Source>CombatMenu\menuFont.spritefont</Source>
+      <Name>CombatMenu\menuFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatMenu\menuFont.xnb</Output>
+      <Time>2013-04-05T14:12:39.9632942-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Bar.png</Source>
+      <Name>Sprites\Bar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\Bar.xnb</Output>
+      <Time>2013-04-05T14:39:45.0852459-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
