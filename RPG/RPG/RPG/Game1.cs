@@ -36,6 +36,10 @@ namespace RPG
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+
+            graphics.PreferredBackBufferWidth = Constants.gameWindowWidth;
+            graphics.PreferredBackBufferHeight = Constants.gameWindowHeight;
+       
         }
 
         /// <summary>
@@ -137,6 +141,7 @@ namespace RPG
             spriteBatch.End();
             base.Draw(gameTime);
         }
+
         public void StartGame()
         {
             gameScreen = new GameScreen(this);
@@ -144,6 +149,7 @@ namespace RPG
 
             startScreen = null;
         }
+
         public void CombatTime()
         {
             combatScreen = new CombatScreen(this);
@@ -151,6 +157,7 @@ namespace RPG
 
             startScreen = null;
         }
+
         public void CombatEnd()
         {
             currentScreen = Screen.GameScreen;

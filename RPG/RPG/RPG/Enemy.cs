@@ -22,7 +22,7 @@ namespace RPG
         public Enemy(Texture2D sprite)
         {
             enemy = sprite;
-            position = new Vector2(400, 200);
+            position = new Vector2(390 - enemy.Width, 70);
             enemyRectangle = new Rectangle((int)position.X, (int)position.Y, enemy.Width, enemy.Height);
         }
 

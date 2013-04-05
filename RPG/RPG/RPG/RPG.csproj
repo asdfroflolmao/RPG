@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CombatScreen.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="GameScreen.cs" />
     <Compile Include="Player.cs" />

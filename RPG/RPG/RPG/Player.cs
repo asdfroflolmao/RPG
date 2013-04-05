@@ -18,12 +18,12 @@ namespace RPG
         public Vector2 position;
         KeyboardState lastState;
         public Rectangle playerRectangle;
-
+        
 
         public Player(Texture2D sprite)
         {
             player = sprite;
-            position = new Vector2(400, 400);
+            position = new Vector2(150, 490);
         }
         public void Update(GameTime gametime, GraphicsDevice graphics)
         {

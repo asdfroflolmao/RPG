@@ -18,6 +18,7 @@ namespace RPG
     {
         private Game1 game;
 
+        Texture2D texture;
         Player player;
         Texture2D playerSprite;
         Enemy enemy;
@@ -28,6 +29,7 @@ namespace RPG
         public GameScreen(Game1 game)
         {
             this.game = game;
+            texture = game.Content.Load<Texture2D>(@"Scenes\GameScreen");
             playerSprite = game.Content.Load<Texture2D>(@"Sprites\player");
             player = new Player(playerSprite);
             enemySprite = game.Content.Load<Texture2D>(@"Sprites\player");
@@ -49,6 +51,9 @@ namespace RPG
 
         public void Draw(SpriteBatch spriteBatch)
         {
+            if (texture != null)
+                spriteBatch.Draw(texture, Vector2.Zero, Color.White);
+
             player.Draw(spriteBatch);
             enemy.Draw(spriteBatch);
         }

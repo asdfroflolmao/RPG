@@ -1,3 +1,4 @@
-Content\Scenes\StartScreen.xnb
 Content\Sprites\player.xnb
+Content\Scenes\StartScreen.xnb
 Content\Scenes\CombatScreen.xnb
+Content\Scenes\GameScreen.xnb

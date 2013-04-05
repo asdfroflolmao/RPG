@@ -7,3 +7,13 @@ C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\obj\x86\Debug\RPG.pdb
 C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\StartScreen.xnb
 C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\player.xnb
 C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\CombatScreen.xnb
+C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\player.xnb
+C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\StartScreen.xnb
+C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\CombatScreen.xnb
+C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\RPG.exe
+C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\RPG.pdb
+C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\obj\x86\Debug\RPG.csprojResolveAssemblyReference.cache
+C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\obj\x86\Debug\RPG.exe
+C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\obj\x86\Debug\RPG.pdb
+C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\GameScreen.xnb
