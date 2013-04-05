@@ -2,22 +2,22 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>Scenes\StartScreen.png</Source>
-      <Name>Scenes\StartScreen</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\StartScreen.xnb</Output>
-      <Time>2013-04-04T15:53:24.7983345-04:00</Time>
-    </Item>
-    <Item>
       <Source>Sprites\player.png</Source>
       <Name>Sprites\player</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\player.xnb</Output>
-      <Time>2013-02-05T17:25:29.2879237-05:00</Time>
+      <Time>2013-04-03T19:10:11.228657-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Scenes\StartScreen.png</Source>
+      <Name>Scenes\StartScreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\StartScreen.xnb</Output>
+      <Time>2013-04-04T19:34:43.1257957-04:00</Time>
     </Item>
     <Item>
       <Source>Scenes\CombatScreen.png</Source>
@@ -26,7 +26,25 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\CombatScreen.xnb</Output>
-      <Time>2013-04-04T15:58:39.42433-04:00</Time>
+      <Time>2013-04-04T19:34:43.1087947-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Scenes\GameScreen.png</Source>
+      <Name>Scenes\GameScreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\GameScreen.xnb</Output>
+      <Time>2013-04-05T01:16:44.2422393-04:00</Time>
+    </Item>
+    <Item>
+      <Source>CombatMenu\menuFont.spritefont</Source>
+      <Name>CombatMenu\menuFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatMenu\menuFont.xnb</Output>
+      <Time>2013-04-05T02:36:34.7782423-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -67,7 +85,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2013-01-29T17:39:51.2806072-05:00</Value>
+        <Value>2013-02-03T15:39:08.4229107-05:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

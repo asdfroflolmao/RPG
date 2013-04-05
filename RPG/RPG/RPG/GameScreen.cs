@@ -40,9 +40,10 @@ namespace RPG
         {
             KeyboardState keyboardState = Keyboard.GetState();
 
-            if (player.playerRectangle.Intersects(enemy.enemyRectangle))// if player intersects enemy -> CombatScreen
+            if (enemy!=null && player.playerRectangle.Intersects(enemy.enemyRectangle))// if player intersects enemy -> CombatScreen
             {
                 game.CombatTime();
+                enemy = null;
             }
 
             lastState = keyboardState;
@@ -55,7 +56,8 @@ namespace RPG
                 spriteBatch.Draw(texture, Vector2.Zero, Color.White);
 
             player.Draw(spriteBatch);
-            enemy.Draw(spriteBatch);
+            if(enemy!=null)
+                enemy.Draw(spriteBatch);
         }
     }
 }
