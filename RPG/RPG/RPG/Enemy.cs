@@ -18,7 +18,7 @@ namespace RPG
         KeyboardState lastState;
         public Rectangle enemyRectangle;
 
-
+        int turnCounter = 0;
         public Enemy(Texture2D sprite)
         {
             enemy = sprite;
@@ -29,6 +29,30 @@ namespace RPG
         public void Draw(SpriteBatch playerSprite)
         {
             playerSprite.Draw(enemy, position, Color.White);
+        }
+
+        public void AI()
+        {
+            //if(turnCounter==0)
+            //    //enemy.attack
+            //if(turnCounter==1)
+            //    //enemy.attack
+        }
+        public int getHP()
+        {
+            return health;
+        }
+        //public int getMANA()
+        //{
+        //    return mana;
+        //}
+        public void setHP(int damageValue)
+        {
+            health -= damageValue;
+        }
+        public int getAttack()
+        {
+            return attack;
         }
     }
 }

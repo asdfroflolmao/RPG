@@ -19,9 +19,9 @@ namespace RPG
         private Game1 game;
 
         Texture2D texture;
-        Player player;
+        public Player player;
         Texture2D playerSprite;
-        Enemy enemy;
+        public Enemy enemy;
         Texture2D enemySprite;
 
         KeyboardState lastState;

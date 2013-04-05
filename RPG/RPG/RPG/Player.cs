@@ -55,5 +55,18 @@ namespace RPG
         {
             playerSprite.Draw(player, position, Color.White);
         }
+
+        public int getHP()
+        {
+            return health;
+        }
+        //public int getMANA()
+        //{
+        //    return mana;
+        //}
+        public int getAttack()
+        {
+            return attack;
+        }
     }
 }

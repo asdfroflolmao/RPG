@@ -152,7 +152,7 @@ namespace RPG
 
         public void CombatTime()
         {
-            combatScreen = new CombatScreen(this);
+            combatScreen = new CombatScreen(this, gameScreen.player, gameScreen.enemy);
             currentScreen = Screen.CombatScreen;
 
             startScreen = null;

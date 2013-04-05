@@ -19,13 +19,17 @@ namespace RPG
         private KeyboardState lastState;
         SpriteFont menufont;
         int activeItem = 0;
+        Player player;
+        Enemy enemy;
 
-        public CombatScreen(Game1 game)
+        public CombatScreen(Game1 game, Player igplayer, Enemy igenemy)
         {
             this.game = game;
             texture = game.Content.Load<Texture2D>(@"Scenes\CombatScreen");
             menufont = game.Content.Load<SpriteFont>(@"CombatMenu\menuFont");
             lastState = Keyboard.GetState();
+            player = igplayer;
+            enemy = igenemy;
         }
 
         public void Update()
@@ -44,7 +48,19 @@ namespace RPG
 
             if (keyboardState.IsKeyDown(Keys.Enter) && lastState.IsKeyUp(Keys.Enter))
             {
-                game.CombatEnd();
+                if(enemy.getHP() <= 0)
+                    game.CombatEnd(); //?bit buggy
+                if (player.getHP() <= 0)
+                    game.CombatEnd();// GAME.END();
+
+                if (activeItem == 0)
+                    enemy.setHP(player.getAttack());//decrease enemy health by player.attack
+                if (activeItem == 1)
+                    enemy.setHP(player.getAttack());//decrease enemy health by player.magic
+                //if (activeItem == 2)
+                //    ;//pop item selection
+                if (activeItem == 3)
+                    ;//do nothing. "defend"
             }
 
             lastState = keyboardState;
@@ -55,18 +71,30 @@ namespace RPG
             if (texture != null)
                 spriteBatch.Draw(texture, new Vector2(0f, 0f), Color.White);
             drawMenu(spriteBatch);
+
+            //*****ENEMY STATS*****//
+            spriteBatch.DrawString(menufont, "Enemy: " /*+ enemy.getNAME()*/, new Vector2(game.GraphicsDevice.Viewport.Width / 2 - 50, game.GraphicsDevice.Viewport.Height / 2 - 250), Color.White);
+            spriteBatch.DrawString(menufont, "HP: " + enemy.getHP(), new Vector2(game.GraphicsDevice.Viewport.Width / 2-50, game.GraphicsDevice.Viewport.Height / 2-225), Color.White);
+            //spriteBatch.DrawString(menufont, "MP: " + enemy.getMANA(), new Vector2(game.GraphicsDevice.Viewport.Width / 2-50, game.GraphicsDevice.Viewport.Height / 2-300), Color.White);
+
+            //*****PLAYER STATS*****//
+            spriteBatch.DrawString(menufont, "CHARACTER NAME" /*+ player.getNAME()*/, new Vector2(game.GraphicsDevice.Viewport.Width / 2 - 50, game.GraphicsDevice.Viewport.Height / 2 - 50), Color.White);
+            spriteBatch.DrawString(menufont, "HP: " + player.getHP(), new Vector2(game.GraphicsDevice.Viewport.Width / 2-50, game.GraphicsDevice.Viewport.Height / 2 - 25), Color.White);
+
         }
 
         public void drawMenu(SpriteBatch spriteBatch)
         {
-            if (activeItem == 0) spriteBatch.DrawString(menufont, "Attack", new Vector2(30, 45), Color.Black);
-            else spriteBatch.DrawString(menufont, "Attack", new Vector2(25, 45), Color.White);
-            if (activeItem == 1) spriteBatch.DrawString(menufont, "Magic", new Vector2(30, 80), Color.Black);
-            else spriteBatch.DrawString(menufont, "Magic", new Vector2(25, 80), Color.White);
-            if (activeItem == 2) spriteBatch.DrawString(menufont, "Item", new Vector2(30, 125), Color.Black);
-            else spriteBatch.DrawString(menufont, "Attack", new Vector2(25, 125), Color.White);
-            if (activeItem == 3) spriteBatch.DrawString(menufont, "Defend", new Vector2(30, 170), Color.Black);
-            else spriteBatch.DrawString(menufont, "Magic", new Vector2(25, 170), Color.White);
+            if (activeItem == 0) spriteBatch.DrawString(menufont, "Attack", new Vector2(30, 445), Color.Black);
+            else spriteBatch.DrawString(menufont, "Attack", new Vector2(25, 445), Color.White);
+            if (activeItem == 1) spriteBatch.DrawString(menufont, "Magic", new Vector2(30, 470), Color.Black);
+            else spriteBatch.DrawString(menufont, "Magic", new Vector2(25, 470), Color.White);
+            if (activeItem == 2) spriteBatch.DrawString(menufont, "Item", new Vector2(30, 495), Color.Black);
+            else spriteBatch.DrawString(menufont, "Item", new Vector2(25, 495), Color.White);
+            if (activeItem == 3) spriteBatch.DrawString(menufont, "Defend", new Vector2(30, 520), Color.Black);
+            else spriteBatch.DrawString(menufont, "Defend", new Vector2(25, 520), Color.White);
+            
+            
         }
     }
 }
