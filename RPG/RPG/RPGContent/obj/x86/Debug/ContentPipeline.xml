@@ -11,22 +11,13 @@
       <Time>2013-04-04T22:11:23.679889-04:00</Time>
     </Item>
     <Item>
-      <Source>Scenes\StartScreen.png</Source>
-      <Name>Scenes\StartScreen</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\StartScreen.xnb</Output>
-      <Time>2013-04-04T22:11:23.679889-04:00</Time>
-    </Item>
-    <Item>
       <Source>Scenes\CombatScreen.png</Source>
       <Name>Scenes\CombatScreen</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\CombatScreen.xnb</Output>
-      <Time>2013-04-04T22:11:23.679889-04:00</Time>
+      <Time>2013-04-05T21:51:39.6544117-04:00</Time>
     </Item>
     <Item>
       <Source>Scenes\GameScreen.png</Source>
@@ -38,15 +29,6 @@
       <Time>2013-04-04T23:50:28.2979017-04:00</Time>
     </Item>
     <Item>
-      <Source>CombatMenu\menuFont.spritefont</Source>
-      <Name>CombatMenu\menuFont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatMenu\menuFont.xnb</Output>
-      <Time>2013-04-05T14:12:39.9632942-04:00</Time>
-    </Item>
-    <Item>
       <Source>Sprites\Bar.png</Source>
       <Name>Sprites\Bar</Name>
       <Importer>TextureImporter</Importer>
@@ -54,6 +36,33 @@
       <Options>None</Options>
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\Bar.xnb</Output>
       <Time>2013-04-05T14:39:45.0852459-04:00</Time>
+    </Item>
+    <Item>
+      <Source>CombatScreen\CombatWin.png</Source>
+      <Name>CombatScreen\CombatWin</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatScreen\CombatWin.xnb</Output>
+      <Time>2013-04-05T20:09:31.6759868-04:00</Time>
+    </Item>
+    <Item>
+      <Source>CombatScreen\menuFont.spritefont</Source>
+      <Name>CombatScreen\menuFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatScreen\menuFont.xnb</Output>
+      <Time>2013-04-05T14:12:39.9632942-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Scenes\MainMenu.png</Source>
+      <Name>Scenes\MainMenu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\MainMenu.xnb</Output>
+      <Time>2013-04-05T21:44:31.313912-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

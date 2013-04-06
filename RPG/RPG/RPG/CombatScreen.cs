@@ -14,13 +14,15 @@ namespace RPG
 {
     class CombatScreen
     {
-        private Texture2D texture;
         private Game1 game;
+        private Texture2D texture;
+        private Texture2D combatWin;        
         private KeyboardState lastState;
         SpriteFont menufont;
         int activeItem = 0;
         Player player;
         Enemy enemy;
+        private bool playerWon = false;
 
         //Health Bars
         private Texture2D healthTexture;
@@ -35,14 +37,15 @@ namespace RPG
         {
             this.game = game;
             texture = game.Content.Load<Texture2D>(@"Scenes\CombatScreen");
-            menufont = game.Content.Load<SpriteFont>(@"CombatMenu\menuFont");
+            menufont = game.Content.Load<SpriteFont>(@"CombatScreen\menuFont");
             healthTexture = game.Content.Load<Texture2D>(@"Sprites\Bar");
+            combatWin = game.Content.Load<Texture2D>(@"CombatScreen\CombatWin");
             lastState = Keyboard.GetState();
             
             player = igplayer;
             playerStartHp = player.getHP();
-            playerHealthBackgroundRectangle = new Rectangle(game.GraphicsDevice.Viewport.Width / 2 - 50, game.GraphicsDevice.Viewport.Height / 2 - 55 - Constants.hpBarHeight, Constants.hpBarWidth, 20);
-            enemyHealthBackgroundRectangle = new Rectangle(game.GraphicsDevice.Viewport.Width / 2 - 50, game.GraphicsDevice.Viewport.Height / 2 - 255 - Constants.hpBarHeight, Constants.hpBarWidth, 20);
+            playerHealthBackgroundRectangle = new Rectangle(50, 145 - Constants.hpBarHeight, Constants.hpBarWidth, 20);
+            enemyHealthBackgroundRectangle = new Rectangle(450, 145 - Constants.hpBarHeight, Constants.hpBarWidth, 20);
 
             enemy = igenemy;
             enemyStartHp = enemy.getHP();
@@ -53,23 +56,27 @@ namespace RPG
             int playerHpBarWidth = (player.getHP() * Constants.hpBarWidth / playerStartHp);
             int enemyHpBarWidth = (enemy.getHP() * Constants.hpBarWidth / enemyStartHp);
 
-            playerHealthRectangle = new Rectangle(game.GraphicsDevice.Viewport.Width / 2 - 50, game.GraphicsDevice.Viewport.Height / 2 - 55 - Constants.hpBarHeight, playerHpBarWidth, 20);
-            enemyHealthRectangle = new Rectangle(game.GraphicsDevice.Viewport.Width / 2 - 50, game.GraphicsDevice.Viewport.Height / 2 - 255 - Constants.hpBarHeight, enemyHpBarWidth, 20);
+            playerHealthRectangle = new Rectangle(50, 145 - Constants.hpBarHeight, playerHpBarWidth, 20);
+            enemyHealthRectangle = new Rectangle(450, 145 - Constants.hpBarHeight, enemyHpBarWidth, 20);
 
             KeyboardState keyboardState = Keyboard.GetState();
 
             if (enemy.getHP() <= 0)
-                //Display Battle Won screen
-                if(keyboardState.IsKeyDown(Keys.Enter))
+            {
+                playerWon = true;
+                if (keyboardState.IsKeyDown(Keys.Enter) && lastState.IsKeyUp(Keys.Enter))
                 {
                     game.CombatEnd(); //Battle WIN
                 }
+            }
             if (player.getHP() <= 0)
-                //Display Battle Won screen
-                if(keyboardState.IsKeyDown(Keys.Enter))
+            {
+                //Game over?
+                if (keyboardState.IsKeyDown(Keys.Enter) && lastState.IsKeyUp(Keys.Enter))
                 {
                     game.CombatEnd(); //Battle LOST
                 }
+            }
 
             if (keyboardState.IsKeyDown(Keys.Up) && lastState.IsKeyUp(Keys.Up))
             {
@@ -99,23 +106,29 @@ namespace RPG
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            if (texture != null)
-                spriteBatch.Draw(texture, new Vector2(0f, 0f), Color.White);
-            drawMenu(spriteBatch);
+            if (playerWon)
+            {
+                spriteBatch.Draw(combatWin, Vector2.Zero, Color.White);
+            }
+            else
+            {
+                if (texture != null)
+                    spriteBatch.Draw(texture, new Vector2(0f, 0f), Color.White);
+                drawMenu(spriteBatch);
 
-            //*****ENEMY STATS*****//
-            spriteBatch.Draw(healthTexture, enemyHealthBackgroundRectangle, Color.White);
-            spriteBatch.Draw(healthTexture, enemyHealthRectangle, Color.Red);
-            spriteBatch.DrawString(menufont, "Enemy: " /*+ enemy.getNAME()*/, new Vector2(game.GraphicsDevice.Viewport.Width / 2 - 50, game.GraphicsDevice.Viewport.Height / 2 - 250), Color.White);
-            spriteBatch.DrawString(menufont, "HP: " + enemy.getHP(), new Vector2(game.GraphicsDevice.Viewport.Width / 2-50, game.GraphicsDevice.Viewport.Height / 2-225), Color.White);
-            //spriteBatch.DrawString(menufont, "MP: " + enemy.getMANA(), new Vector2(game.GraphicsDevice.Viewport.Width / 2-50, game.GraphicsDevice.Viewport.Height / 2-300), Color.White);
+                //*****ENEMY STATS*****//
+                spriteBatch.Draw(healthTexture, enemyHealthBackgroundRectangle, Color.White);
+                spriteBatch.Draw(healthTexture, enemyHealthRectangle, Color.Red);
+                spriteBatch.DrawString(menufont, "Enemy: " /*+ enemy.getNAME()*/, new Vector2(450, 150), Color.White);
+                spriteBatch.DrawString(menufont, "HP: " + enemy.getHP(), new Vector2(450, 175), Color.White);
+                //spriteBatch.DrawString(menufont, "MP: " + enemy.getMANA(), new Vector2(game.GraphicsDevice.Viewport.Width / 2-50, game.GraphicsDevice.Viewport.Height / 2-300), Color.White);
 
-            //*****PLAYER STATS*****//
-            spriteBatch.Draw(healthTexture, playerHealthBackgroundRectangle, Color.White);
-            spriteBatch.Draw(healthTexture, playerHealthRectangle, Color.Red);
-            spriteBatch.DrawString(menufont, "CHARACTER NAME" /*+ player.getNAME()*/, new Vector2(game.GraphicsDevice.Viewport.Width / 2 - 50, game.GraphicsDevice.Viewport.Height / 2 - 50), Color.White);
-            spriteBatch.DrawString(menufont, "HP: " + player.getHP(), new Vector2(game.GraphicsDevice.Viewport.Width / 2-50, game.GraphicsDevice.Viewport.Height / 2 - 25), Color.White);
-
+                //*****PLAYER STATS*****//
+                spriteBatch.Draw(healthTexture, playerHealthBackgroundRectangle, Color.White);
+                spriteBatch.Draw(healthTexture, playerHealthRectangle, Color.Red);
+                spriteBatch.DrawString(menufont, "CHARACTER NAME" /*+ player.getNAME()*/, new Vector2(50, 150), Color.White);
+                spriteBatch.DrawString(menufont, "HP: " + player.getHP(), new Vector2(50, 175), Color.White);
+            }
         }
 
         public void drawMenu(SpriteBatch spriteBatch)
