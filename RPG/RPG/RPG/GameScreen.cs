@@ -26,13 +26,14 @@ namespace RPG
 
         KeyboardState lastState;
 
+
         public GameScreen(Game1 game)
         {
             this.game = game;
             texture = game.Content.Load<Texture2D>(@"Scenes\GameScreen");
-            playerSprite = game.Content.Load<Texture2D>(@"Sprites\player");
+            playerSprite = game.Content.Load<Texture2D>(@"Sprites\playerSheet");
             player = new Player(playerSprite);
-            enemySprite = game.Content.Load<Texture2D>(@"Sprites\player");
+            enemySprite = game.Content.Load<Texture2D>(@"Sprites\playerSheet");
             enemy = new Enemy(playerSprite);
         }
 
