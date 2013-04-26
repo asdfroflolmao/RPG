@@ -23,8 +23,11 @@ namespace RPG
         Player player;
         Enemy enemy;
         private bool playerWon = false;
-
-        //Health Bars
+        
+        
+        /// <summary>
+        /// Health Bars 
+        /// </summary>
         private Texture2D healthTexture;
         private Rectangle playerHealthRectangle;
         private Rectangle playerHealthBackgroundRectangle;
@@ -33,9 +36,20 @@ namespace RPG
         private int playerStartHp;
         private int enemyStartHp;
 
-        public CombatScreen(Game1 game, Player igplayer, Enemy igenemy)
+        Random rand;
+        //lock 0 for player, 1 for enemy.
+        int turn;
+        double time = 0;
+        double elapsedTime;
+        double timeToWait = 2000;
+
+        public CombatScreen(Game1 game, Player igplayer, Enemy igenemy, Random _rand)
         {
             this.game = game;
+            rand = _rand;
+            
+            turn = rand.Next(0, 2);// randomized first turn choosing.
+
             texture = game.Content.Load<Texture2D>(@"Scenes\CombatScreen");
             menufont = game.Content.Load<SpriteFont>(@"CombatScreen\menuFont");
             healthTexture = game.Content.Load<Texture2D>(@"Sprites\Bar");
@@ -51,8 +65,11 @@ namespace RPG
             enemyStartHp = enemy.getHP();
         }
 
-        public void Update()
+        public void Update(GameTime gameTime)
         {
+            elapsedTime = gameTime.ElapsedGameTime.Milliseconds;
+            time += elapsedTime;
+
             int playerHpBarWidth = (player.getHP() * Constants.hpBarWidth / playerStartHp);
             int enemyHpBarWidth = (enemy.getHP() * Constants.hpBarWidth / enemyStartHp);
 
@@ -78,29 +95,45 @@ namespace RPG
                 }
             }
 
-            if (keyboardState.IsKeyDown(Keys.Up) && lastState.IsKeyUp(Keys.Up))
+            /*BATTLE SEQUENCE*/
+            if (turn == 0) //player's turn
             {
-                if (activeItem != 0)
-                    activeItem--;
-            }
-            if (keyboardState.IsKeyDown(Keys.Down) && lastState.IsKeyUp(Keys.Down))
-            {
-                if (activeItem != 3)
-                    activeItem++;
-            }
+                if (time >= timeToWait)
+                {
+                    if (keyboardState.IsKeyDown(Keys.Up) && lastState.IsKeyUp(Keys.Up))
+                    {
+                        if (activeItem != 0)
+                            activeItem--;
+                    }
+                    if (keyboardState.IsKeyDown(Keys.Down) && lastState.IsKeyUp(Keys.Down))
+                    {
+                        if (activeItem != 3)
+                            activeItem++;
+                    }
 
-            if (keyboardState.IsKeyDown(Keys.Enter) && lastState.IsKeyUp(Keys.Enter))
-            {
-                if (activeItem == 0)
-                    enemy.setHP(player.getAttack());//decrease enemy health by player.attack
-                if (activeItem == 1)
-                    enemy.setHP(player.getAttack());//decrease enemy health by player.magic
-                //if (activeItem == 2)
-                //    ;//pop item selection
-                if (activeItem == 3)
-                    ;//do nothing. "defend"
+                    if (keyboardState.IsKeyDown(Keys.Enter) && lastState.IsKeyUp(Keys.Enter))
+                    {
+                        if (activeItem == 0)
+                            enemy.setHP(player.getAttack());//decrease enemy health by player.attack
+                        if (activeItem == 1)
+                            enemy.setHP(player.getAttack());//decrease enemy health by player.magic
+                        //if (activeItem == 2)
+                        //    ;//pop item selection
+                        if (activeItem == 3)
+                            ;//do nothing. "defend"
+                        turn = 1;
+                    }
+                }
             }
-
+            if (turn == 1)
+            {
+                if (time >= timeToWait)
+                {
+                    enemy.AI(player);
+                    turn = 0;
+                    time = 0;
+                }
+            }
             lastState = keyboardState;
         }
 

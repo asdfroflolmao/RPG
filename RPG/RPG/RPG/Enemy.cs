@@ -17,8 +17,18 @@ namespace RPG
         public Vector2 position;
         KeyboardState lastState;
         public Rectangle enemyRectangle;
+        
+        /// <summary>
+        /// animations
+        Point frameSize = new Point(32, 32);
+        Point currentFrame = new Point(0, 0);
+        Point sheetSize = new Point(3, 4);
+        int frame = 0;
+        int fps = 30;
+        /// </summary>
 
         int turnCounter = 0;
+
         public Enemy(Texture2D sprite)
         {
             enemy = sprite;
@@ -26,17 +36,21 @@ namespace RPG
             enemyRectangle = new Rectangle((int)position.X, (int)position.Y, enemy.Width, enemy.Height);
         }
 
-        public void Draw(SpriteBatch playerSprite)
+        public void Draw(SpriteBatch enemySprite)
         {
-            playerSprite.Draw(enemy, position, Color.White);
+            enemySprite.Draw(enemy,position,Color.White);
+            //enemySprite.Draw(enemy, position, new Rectangle(currentFrame.X * frameSize.X, currentFrame.Y * frameSize.Y, frameSize.X, frameSize.Y), Color.White, 0, Vector2.Zero, 1, SpriteEffects.None, 0);
         }
 
-        public void AI()
+        public void AI(Player player)
         {
-            //if(turnCounter==0)
-            //    //enemy.attack
-            //if(turnCounter==1)
-            //    //enemy.attack
+            if(turnCounter==0)
+                player.setHP(attack);
+            if (turnCounter == 1)
+                player.setHP(attack);
+            else
+                player.setHP(attack);
+            turnCounter++;
         }
         public int getHP()
         {

@@ -19,11 +19,14 @@ namespace RPG
         KeyboardState lastState;
         public Rectangle playerRectangle;
 
+        /// <summary>
+        /// animations
         Point frameSize = new Point(32, 32);
         Point currentFrame = new Point(0, 0);
         Point sheetSize = new Point(3, 4);
         int frame = 0;
         int fps = 30;
+        /// </summary>
 
         public Player(Texture2D sprite)
         {
@@ -121,6 +124,10 @@ namespace RPG
         //{
         //    return mana;
         //}
+        public void setHP(int damageValue)
+        {
+            health -= damageValue;
+        }
         public int getAttack()
         {
             return attack;

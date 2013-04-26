@@ -31,6 +31,7 @@ namespace RPG
         CombatScreen combatScreen;
 
         Screen currentScreen;
+        Random rand = new Random();
 
         public Game1()
         {
@@ -53,6 +54,7 @@ namespace RPG
             // TODO: Add your initialization logic here
 
             base.Initialize();
+            
         }
 
         /// <summary>
@@ -105,7 +107,7 @@ namespace RPG
                     break;
                 case Screen.CombatScreen:
                     if (combatScreen != null)
-                        combatScreen.Update();
+                        combatScreen.Update(gameTime);
                     break;
             }
             base.Update(gameTime);
@@ -152,7 +154,7 @@ namespace RPG
 
         public void CombatTime()
         {
-            combatScreen = new CombatScreen(this, gameScreen.player, gameScreen.enemy);
+            combatScreen = new CombatScreen(this, gameScreen.player, gameScreen.enemy, rand);
             currentScreen = Screen.CombatScreen;
 
             startScreen = null;
