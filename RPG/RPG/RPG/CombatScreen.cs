@@ -122,6 +122,7 @@ namespace RPG
                         if (activeItem == 3)
                             ;//do nothing. "defend"
                         turn = 1;
+                        time = 0;
                     }
                 }
             }
