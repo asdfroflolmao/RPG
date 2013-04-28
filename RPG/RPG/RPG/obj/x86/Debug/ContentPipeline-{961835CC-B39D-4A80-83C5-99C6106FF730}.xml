@@ -73,6 +73,15 @@
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatScreen\menuFont.xnb</Output>
       <Time>2013-04-06T17:35:42.9191716-04:00</Time>
     </Item>
+    <Item>
+      <Source>Textures\tileset.png</Source>
+      <Name>Textures\tileset</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Textures\tileset.xnb</Output>
+      <Time>2013-04-27T19:14:13.7129996-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{961835CC-B39D-4A80-83C5-99C6106FF730}</ContentProjectGUID>

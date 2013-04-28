@@ -26,6 +26,9 @@ namespace RPG
 
         KeyboardState lastState;
 
+        TileMap myMap = new TileMap();
+        int squaresAcross = 50;
+        int squaresDown = 50;
 
         public GameScreen(Game1 game)
         {
@@ -35,6 +38,8 @@ namespace RPG
             player = new Player(playerSprite);
             enemySprite = game.Content.Load<Texture2D>(@"Sprites\playerSheet");
             enemy = new Enemy(playerSprite);
+            Tile.TileSetTexture = game.Content.Load<Texture2D>(@"Textures\tileset");
+
         }
 
         public void Update(GameTime gameTime)
@@ -53,12 +58,25 @@ namespace RPG
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            if (texture != null)
-                spriteBatch.Draw(texture, Vector2.Zero, Color.White);
+            for (int y = 0; y < squaresDown; y++)
+            {
+                for (int x = 0; x < squaresAcross; x++)
+                {
+                    spriteBatch.Draw(
+                        Tile.TileSetTexture,
+                        new Rectangle((x * 32), (y * 32), 32, 32),
+                        Tile.GetSourceRectangle(myMap.Rows[y].Columns[x].TileID),
+                        Color.White);
+                }
+            }
+
+            //if (texture != null)
+            //    spriteBatch.Draw(texture, Vector2.Zero, Color.White);
 
             player.Draw(spriteBatch);
             if(enemy!=null)
                 enemy.Draw(spriteBatch);
+
         }
     }
 }
