@@ -5,5 +5,5 @@ Content\CombatScreen\CombatWin.xnb
 Content\Scenes\MainMenu.xnb
 Content\Scenes\CombatScreen.xnb
 Content\Sprites\playerSheet.xnb
-Content\CombatScreen\menuFont.xnb
 Content\Textures\tileset.xnb
+Content\CombatScreen\menuFont.xnb

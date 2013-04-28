@@ -27,8 +27,8 @@ namespace RPG
         KeyboardState lastState;
 
         TileMap myMap = new TileMap();
-        int squaresAcross = 50;
-        int squaresDown = 50;
+        int squaresAcross = 25;
+        int squaresDown = 19;
 
         public GameScreen(Game1 game)
         {

@@ -31,7 +31,7 @@ namespace RPG
                 Rows.Add(thisRow);
             }
 
-            // Create Sample Map Data
+            // Create Sample Map Data //19 rows 25 columns in a screen
             Rows[0].Columns[3].TileID = 3;
             Rows[0].Columns[4].TileID = 3;
             Rows[0].Columns[5].TileID = 1;
