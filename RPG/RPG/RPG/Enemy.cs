@@ -10,6 +10,7 @@ namespace RPG
 {
     class Enemy
     {
+        string name = string.Empty;
         Texture2D enemy;
         int health = 100;
         int attack = 10;
@@ -29,8 +30,9 @@ namespace RPG
 
         int turnCounter = 0;
 
-        public Enemy(Texture2D sprite, Vector2 pos)
+        public Enemy(Texture2D sprite, Vector2 pos, string newName)
         {
+            name = newName;
             enemy = sprite;
             position = pos;
             enemyRectangle = new Rectangle((int)position.X, (int)position.Y, enemy.Width, enemy.Height);
@@ -52,21 +54,30 @@ namespace RPG
                 player.setHP(attack);
             turnCounter++;
         }
+        
         public int getHP()
         {
             return health;
         }
+        
         //public int getMANA()
         //{
         //    return mana;
         //}
+        
         public void setHP(int damageValue)
         {
             health -= damageValue;
         }
+
         public int getAttack()
         {
             return attack;
+        }
+
+        public string getName()
+        {
+            return name;
         }
     }
 }

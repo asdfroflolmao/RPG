@@ -10,6 +10,7 @@ namespace RPG
 {
     class Player
     {
+        string name = "Artemis";
         Texture2D player;
         int health = 100;
         int attack = 10;
@@ -107,8 +108,13 @@ namespace RPG
                         currentFrame.X = 0;
                     }
                 }
+
+                //Console Debugging
+                Console.WriteLine("PLAYER X POSITION: " + position.X + " | PLAYER Y POSITION: " + position.Y);
+
                 position.X = MathHelper.Clamp(position.X, 0, graphics.Viewport.Width - frameSize.X);
                 position.Y = MathHelper.Clamp(position.Y, 0, graphics.Viewport.Height - frameSize.Y);
+                
                 playerRectangle = new Rectangle((int)position.X, (int)position.Y, frameSize.X, frameSize.Y);
                 lastState = keyboardState;
             }
@@ -123,21 +129,30 @@ namespace RPG
         {
             return health;
         }
+
         //public int getMANA()
         //{
         //    return mana;
         //}
+
         public void setHP(int damageValue)
         {
             health -= damageValue;
         }
+
         public int getAttack()
         {
             return attack;
         }
+
         public int getMAttack()
         {
             return magicAtk;
+        }
+
+        public string getName()
+        {
+            return name;
         }
     }
 }

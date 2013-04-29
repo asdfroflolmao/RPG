@@ -153,14 +153,14 @@ namespace RPG
                 //*****ENEMY STATS*****//
                 spriteBatch.Draw(healthTexture, enemyHealthBackgroundRectangle, Color.White);
                 spriteBatch.Draw(healthTexture, enemyHealthRectangle, Color.Red);
-                spriteBatch.DrawString(menufont, "Enemy: " /*+ enemy.getNAME()*/, new Vector2(450, 150), Color.White);
+                spriteBatch.DrawString(menufont, "Enemy: " + enemy.getName(), new Vector2(450, 150), Color.White);
                 spriteBatch.DrawString(menufont, "HP: " + enemy.getHP(), new Vector2(450, 175), Color.White);
                 //spriteBatch.DrawString(menufont, "MP: " + enemy.getMANA(), new Vector2(game.GraphicsDevice.Viewport.Width / 2-50, game.GraphicsDevice.Viewport.Height / 2-300), Color.White);
 
                 //*****PLAYER STATS*****//
                 spriteBatch.Draw(healthTexture, playerHealthBackgroundRectangle, Color.White);
                 spriteBatch.Draw(healthTexture, playerHealthRectangle, Color.Red);
-                spriteBatch.DrawString(menufont, "CHARACTER NAME" /*+ player.getNAME()*/, new Vector2(50, 150), Color.White);
+                spriteBatch.DrawString(menufont, "You: " + player.getName(), new Vector2(50, 150), Color.White);
                 spriteBatch.DrawString(menufont, "HP: " + player.getHP(), new Vector2(50, 175), Color.White);
             }
         }

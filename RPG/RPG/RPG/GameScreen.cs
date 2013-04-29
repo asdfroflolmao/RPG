@@ -39,10 +39,10 @@ namespace RPG
             this.game = game;
             level = 1;
             texture = game.Content.Load<Texture2D>(@"Scenes\GameScreen");
-            playerSprite = game.Content.Load<Texture2D>(@"Sprites\playerSheet");
+            playerSprite = game.Content.Load<Texture2D>(@"Sprites\PlayerSheet");
             player = new Player(playerSprite);
-            enemySprite = game.Content.Load<Texture2D>(@"Sprites\player");
-            enemy = new Enemy(enemySprite, new Vector2(390 - enemySprite.Width, 70));
+            enemySprite = game.Content.Load<Texture2D>(@"Sprites\Enemy");
+            enemy = new Enemy(enemySprite, new Vector2(390 - enemySprite.Width, 70), "Tinky Winky");
             enemyArray = new Enemy[1]{enemy};
             Tile.TileSetTexture = game.Content.Load<Texture2D>(@"Textures\tileset");
             myMap = new TileMap(level);
@@ -66,8 +66,8 @@ namespace RPG
                     enemyArray = new Enemy[2];
                     //insert 2 enemies diff positions{enemy};
 
-                    enemyArray[0] = new Enemy(enemySprite, new Vector2(500 - enemySprite.Width, 300));
-                    enemyArray[1] = new Enemy(enemySprite, new Vector2(200 - enemySprite.Width, 70));
+                    enemyArray[0] = new Enemy(enemySprite, new Vector2(500 - enemySprite.Width, 300), "Ahnold Schwartzgenheimer");
+                    enemyArray[1] = new Enemy(enemySprite, new Vector2(200 - enemySprite.Width, 70), "Rocky Balboa");
 
                     allDead = false;
                 }
@@ -85,9 +85,9 @@ namespace RPG
                     enemyArray = new Enemy[3];
                     //insert 3 enemies diff positions{enemy};
 
-                    enemyArray[0] = new Enemy(enemySprite, new Vector2(230 - enemySprite.Width, 200));
-                    enemyArray[1] = new Enemy(enemySprite, new Vector2(230 - enemySprite.Width, 30));
-                    enemyArray[2] = new Enemy(enemySprite, new Vector2(600 - enemySprite.Width, 30));
+                    enemyArray[0] = new Enemy(enemySprite, new Vector2(230 - enemySprite.Width, 200), "Christian Bale");
+                    enemyArray[1] = new Enemy(enemySprite, new Vector2(230 - enemySprite.Width, 30), "Samuel L. Jackson");
+                    enemyArray[2] = new Enemy(enemySprite, new Vector2(600 - enemySprite.Width, 30), "Spiderman");
 
                     allDead = false;
                 }
