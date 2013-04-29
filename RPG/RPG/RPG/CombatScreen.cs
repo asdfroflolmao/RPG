@@ -131,6 +131,7 @@ namespace RPG
                 if (time >= timeToWait)
                 {
                     enemy.AI(player);
+                    Game1.MessageBox(new IntPtr(0), "Enemy Attacked you!", "ENEMY ATTACK", 0);
                     turn = 0;
                     time = 0;
                 }

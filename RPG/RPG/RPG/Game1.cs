@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -24,6 +25,9 @@ namespace RPG
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        public static extern uint MessageBox(IntPtr hWnd, String text, String caption, uint type);
+
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
@@ -53,6 +57,7 @@ namespace RPG
         /// </summary>
         protected override void Initialize()
         {
+            //MessageBox(new IntPtr(0), "Text!", "Caption!", 0);
             // TODO: Add your initialization logic here
 
             base.Initialize();

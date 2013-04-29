@@ -46,7 +46,6 @@ namespace RPG
             enemyArray = new Enemy[1]{enemy};
             Tile.TileSetTexture = game.Content.Load<Texture2D>(@"Textures\tileset");
             myMap = new TileMap(level);
-
         }
 
         public void Update(GameTime gameTime)

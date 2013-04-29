@@ -8,3 +8,4 @@ Content\Textures\tileset.xnb
 Content\Scenes\MainMenu.xnb
 Content\CombatScreen\menuFont.xnb
 Content\Sprites\Enemy.xnb
+Content\Sprites\Diamond32.xnb
