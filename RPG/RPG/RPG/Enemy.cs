@@ -29,10 +29,10 @@ namespace RPG
 
         int turnCounter = 0;
 
-        public Enemy(Texture2D sprite)
+        public Enemy(Texture2D sprite, Vector2 pos)
         {
             enemy = sprite;
-            position = new Vector2(390 - enemy.Width, 70);
+            position = pos;
             enemyRectangle = new Rectangle((int)position.X, (int)position.Y, enemy.Width, enemy.Height);
         }
 

@@ -21,24 +21,31 @@ namespace RPG
         Texture2D texture;
         public Player player;
         Texture2D playerSprite;
+        public Enemy[] enemyArray;
         public Enemy enemy;
         Texture2D enemySprite;
 
         KeyboardState lastState;
 
-        TileMap myMap = new TileMap();
+        TileMap myMap;
         int squaresAcross = 25;
         int squaresDown = 19;
+
+        int level;
+        bool allDead=false;
 
         public GameScreen(Game1 game)
         {
             this.game = game;
+            level = 1;
             texture = game.Content.Load<Texture2D>(@"Scenes\GameScreen");
             playerSprite = game.Content.Load<Texture2D>(@"Sprites\playerSheet");
             player = new Player(playerSprite);
-            enemySprite = game.Content.Load<Texture2D>(@"Sprites\playerSheet");
-            enemy = new Enemy(playerSprite);
+            enemySprite = game.Content.Load<Texture2D>(@"Sprites\player");
+            enemy = new Enemy(enemySprite, new Vector2(390 - enemySprite.Width, 70));
+            enemyArray = new Enemy[1]{enemy};
             Tile.TileSetTexture = game.Content.Load<Texture2D>(@"Textures\tileset");
+            myMap = new TileMap(level);
 
         }
 
@@ -46,12 +53,59 @@ namespace RPG
         {
             KeyboardState keyboardState = Keyboard.GetState();
 
-            if (enemy!=null && player.playerRectangle.Intersects(enemy.enemyRectangle))// if player intersects enemy -> CombatScreen
-            {
-                game.CombatTime();
-                enemy = null;
-            }
 
+            if (level == 1)
+            {
+                if (enemyArray[0] == null)
+                {
+                    allDead = true;
+                    level = 2;
+                    myMap = new TileMap(level);
+                    enemyArray = new Enemy[2];
+                    //insert 2 enemies diff positions{enemy};
+
+
+                    enemyArray[0] = new Enemy(enemySprite, new Vector2(500 - enemySprite.Width, 300));
+                    enemyArray[1] = new Enemy(enemySprite, new Vector2(200 - enemySprite.Width, 70));
+
+                    player.position = player.startPosition;//go back to start position
+                    player.setHP(-100);
+                    allDead = false;
+                }
+
+            }
+            if (level == 2)
+            {
+                if (enemyArray[0] == null && enemyArray[1] == null)
+                {
+                    allDead = true;
+                    level = 3;
+                    myMap = new TileMap(level);
+                    enemyArray = new Enemy[3];
+                    //insert 3 enemies diff positions{enemy};
+
+
+                    enemyArray[0] = new Enemy(enemySprite, new Vector2(500 - enemySprite.Width, 300));
+                    enemyArray[1] = new Enemy(enemySprite, new Vector2(200 - enemySprite.Width, 70));
+                    enemyArray[2] = new Enemy(enemySprite, new Vector2(200 - enemySprite.Width, 70));
+
+                    player.position = player.startPosition;//go back to start position
+                    player.setHP(-100);
+                    allDead = false;
+                }
+
+            }
+                for (int j = 0; j < enemyArray.Length; j++)
+                {
+                    
+                    if (enemyArray[j] != null && player.playerRectangle.Intersects(enemyArray[j].enemyRectangle))// if player intersects enemy -> CombatScreen
+                    
+                    {
+                        game.CombatTime(j);
+                        enemyArray[j] = null;
+                    }
+                }
+            
             lastState = keyboardState;
             player.Update(gameTime, game.GraphicsDevice);
         }
@@ -69,14 +123,15 @@ namespace RPG
                         Color.White);
                 }
             }
-
-            //if (texture != null)
-            //    spriteBatch.Draw(texture, Vector2.Zero, Color.White);
-
+            //draw player
             player.Draw(spriteBatch);
-            if(enemy!=null)
-                enemy.Draw(spriteBatch);
 
+            //draw enemies
+            for (int i = 0; i < enemyArray.Length; i++)
+            {
+                if (enemyArray[i] != null)
+                    enemyArray[i].Draw(spriteBatch);
+            }
         }
     }
 }

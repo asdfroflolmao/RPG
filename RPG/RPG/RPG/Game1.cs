@@ -154,9 +154,9 @@ namespace RPG
             startScreen = null;
         }
 
-        public void CombatTime()
+        public void CombatTime(int j)
         {
-            combatScreen = new CombatScreen(this, gameScreen.player, gameScreen.enemy, rand);
+            combatScreen = new CombatScreen(this, gameScreen.player, gameScreen.enemyArray[j], rand);
             currentScreen = Screen.CombatScreen;
 
             startScreen = null;

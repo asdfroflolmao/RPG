@@ -13,9 +13,11 @@ namespace RPG
         Texture2D player;
         int health = 100;
         int attack = 10;
+        int magicAtk = 30;
         //int mana;
         int MOVESPEED = 5;
         public Vector2 position;
+        public Vector2 startPosition;
         KeyboardState lastState;
         public Rectangle playerRectangle;
 
@@ -32,6 +34,7 @@ namespace RPG
         {
             player = sprite;
             position = new Vector2(150, 490);
+            startPosition = new Vector2(150, 490);
         }
         public void Update(GameTime gametime, GraphicsDevice graphics)
         {
@@ -131,6 +134,10 @@ namespace RPG
         public int getAttack()
         {
             return attack;
+        }
+        public int getMAttack()
+        {
+            return magicAtk;
         }
     }
 }

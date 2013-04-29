@@ -41,7 +41,7 @@ namespace RPG
         int turn;
         double time = 0;
         double elapsedTime;
-        double timeToWait = 2000;
+        double timeToWait = 0;
 
         public CombatScreen(Game1 game, Player igplayer, Enemy igenemy, Random _rand)
         {
@@ -116,7 +116,7 @@ namespace RPG
                         if (activeItem == 0)
                             enemy.setHP(player.getAttack());//decrease enemy health by player.attack
                         if (activeItem == 1)
-                            enemy.setHP(player.getAttack());//decrease enemy health by player.magic
+                            enemy.setHP(player.getMAttack());//decrease enemy health by player.magic
                         //if (activeItem == 2)
                         //    ;//pop item selection
                         if (activeItem == 3)
