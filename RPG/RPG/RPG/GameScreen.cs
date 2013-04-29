@@ -46,6 +46,8 @@ namespace RPG
             enemyArray = new Enemy[1]{enemy};
             Tile.TileSetTexture = game.Content.Load<Texture2D>(@"Textures\tileset");
             myMap = new TileMap(level);
+
+            Game1.MessageBox(new IntPtr(0), "This is a sample message box! Go fuck yourself Albert. :D", "Sample", 0);
         }
 
         public void Update(GameTime gameTime)
