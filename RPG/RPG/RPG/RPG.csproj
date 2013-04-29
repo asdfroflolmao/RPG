@@ -82,6 +82,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="StartScreen.cs" />
+    <Compile Include="EditableTextbox.cs" />
+    <Compile Include="Textbox.cs" />
     <Compile Include="Tile.cs" />
     <Compile Include="TileMap.cs" />
   </ItemGroup>

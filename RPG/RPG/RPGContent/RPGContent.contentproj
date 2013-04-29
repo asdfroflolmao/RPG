@@ -65,13 +65,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Scenes\MainMenu.png">
-      <Name>MainMenu</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Scenes\CombatScreen.png">
       <Name>CombatScreen</Name>
       <Importer>TextureImporter</Importer>
@@ -88,6 +81,13 @@
   <ItemGroup>
     <Compile Include="Textures\tileset.png">
       <Name>tileset</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Scenes\MainMenu.png">
+      <Name>MainMenu</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

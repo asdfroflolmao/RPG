@@ -1,9 +1,9 @@
 Content\Sprites\player.xnb
+Content\Scenes\CombatScreen.xnb
 Content\Scenes\GameScreen.xnb
 Content\Sprites\Bar.xnb
 Content\CombatScreen\CombatWin.xnb
+Content\CombatScreen\menuFont.xnb
 Content\Scenes\MainMenu.xnb
-Content\Scenes\CombatScreen.xnb
 Content\Sprites\playerSheet.xnb
 Content\Textures\tileset.xnb
-Content\CombatScreen\menuFont.xnb

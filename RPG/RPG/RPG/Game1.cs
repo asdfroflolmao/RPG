@@ -14,6 +14,7 @@ namespace RPG
     enum Screen
     {
         StartScreen,
+        NameInputScreen,
         GameScreen,
         GameOverScreen,
         CombatScreen
@@ -40,6 +41,7 @@ namespace RPG
 
             graphics.PreferredBackBufferWidth = Constants.gameWindowWidth;
             graphics.PreferredBackBufferHeight = Constants.gameWindowHeight;
+            Window.Title = "Artemis' Diamond";
        
         }
 
