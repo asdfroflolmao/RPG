@@ -61,15 +61,14 @@ namespace RPG
                     allDead = true;
                     level = 2;
                     myMap = new TileMap(level);
+                    player.position = player.startPosition;//go back to start position
+                    player.setHP(-100);//////////DEBUG PURPOSES ONLY
                     enemyArray = new Enemy[2];
                     //insert 2 enemies diff positions{enemy};
-
 
                     enemyArray[0] = new Enemy(enemySprite, new Vector2(500 - enemySprite.Width, 300));
                     enemyArray[1] = new Enemy(enemySprite, new Vector2(200 - enemySprite.Width, 70));
 
-                    player.position = player.startPosition;//go back to start position
-                    player.setHP(-100);
                     allDead = false;
                 }
 
@@ -81,16 +80,15 @@ namespace RPG
                     allDead = true;
                     level = 3;
                     myMap = new TileMap(level);
+                    player.position = player.startPosition;//go back to start position
+                    player.setHP(-100);//////////DEBUG PURPOSES ONLY
                     enemyArray = new Enemy[3];
                     //insert 3 enemies diff positions{enemy};
 
+                    enemyArray[0] = new Enemy(enemySprite, new Vector2(230 - enemySprite.Width, 200));
+                    enemyArray[1] = new Enemy(enemySprite, new Vector2(230 - enemySprite.Width, 30));
+                    enemyArray[2] = new Enemy(enemySprite, new Vector2(600 - enemySprite.Width, 30));
 
-                    enemyArray[0] = new Enemy(enemySprite, new Vector2(500 - enemySprite.Width, 300));
-                    enemyArray[1] = new Enemy(enemySprite, new Vector2(200 - enemySprite.Width, 70));
-                    enemyArray[2] = new Enemy(enemySprite, new Vector2(200 - enemySprite.Width, 70));
-
-                    player.position = player.startPosition;//go back to start position
-                    player.setHP(-100);
                     allDead = false;
                 }
 

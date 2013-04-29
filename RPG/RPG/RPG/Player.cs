@@ -107,9 +107,9 @@ namespace RPG
                         currentFrame.X = 0;
                     }
                 }
-                position.X = MathHelper.Clamp(position.X, 0, graphics.Viewport.Width - player.Width);
-                position.Y = MathHelper.Clamp(position.Y, 0, graphics.Viewport.Height - player.Height);
-                playerRectangle = new Rectangle((int)position.X, (int)position.Y, player.Width, player.Height);
+                position.X = MathHelper.Clamp(position.X, 0, graphics.Viewport.Width - frameSize.X);
+                position.Y = MathHelper.Clamp(position.Y, 0, graphics.Viewport.Height - frameSize.Y);
+                playerRectangle = new Rectangle((int)position.X, (int)position.Y, frameSize.X, frameSize.Y);
                 lastState = keyboardState;
             }
         }

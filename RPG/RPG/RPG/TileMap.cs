@@ -85,6 +85,32 @@ namespace RPG
                 Rows[4].Columns[14].TileID = 2;
             }
 
+            if (level == 3)
+            {
+                for (int i = 5; i < 20; i++)
+                { Rows[1].Columns[i].TileID = 1; }
+                for (int j = 2; j < 20; j++)
+                {
+                    Rows[j].Columns[6].TileID = 1;
+                    Rows[j].Columns[7].TileID = 1;
+                }
+                for (int k = 9; k < 16; k++)
+                {
+                    Rows[k].Columns[14].TileID = 3;
+                    Rows[k].Columns[15].TileID = 3;
+                    Rows[k].Columns[16].TileID = 3;
+                }
+                Rows[2].Columns[12].TileID = 2;
+                Rows[3].Columns[12].TileID = 2;
+                Rows[4].Columns[12].TileID = 2;
+                Rows[2].Columns[13].TileID = 2;
+                Rows[3].Columns[13].TileID = 2;
+                Rows[4].Columns[13].TileID = 2;
+                Rows[2].Columns[14].TileID = 2;
+                Rows[3].Columns[14].TileID = 2;
+                Rows[4].Columns[14].TileID = 2;
+            }
+
         }
 
 
