@@ -53,8 +53,6 @@ namespace RPG
             else
                 player.setHP(attack);
             turnCounter++;
-
-            Game1.MessageBox(new IntPtr(0), String.Format("{0} just attacked you for {1} damage!", name, attack), "Enemy Attack!", 0);
         }
         
         public int getHP()

@@ -25,11 +25,9 @@ namespace RPG
         Enemy enemy;
         private bool playerWon = false;
         private bool playerLost = false;
+        private bool messageOKHit = false;
         
-        
-        /// <summary>
-        /// Health Bars 
-        /// </summary>
+        //Health Bars
         private Texture2D healthTexture;
         private Rectangle playerHealthRectangle;
         private Rectangle playerHealthBackgroundRectangle;
@@ -43,7 +41,7 @@ namespace RPG
         int turn;
         double time = 0;
         double elapsedTime;
-        double timeToWait = 0;
+        double timeToWait = 1000;
 
         public CombatScreen(Game1 game, Player igplayer, Enemy igenemy, Random _rand)
         {
@@ -81,28 +79,10 @@ namespace RPG
 
             KeyboardState keyboardState = Keyboard.GetState();
 
-            if (enemy.getHP() <= 0)
-            {
-                playerWon = true;
-                if (keyboardState.IsKeyDown(Keys.Enter) && lastState.IsKeyUp(Keys.Enter))
-                {
-                    game.CombatEnd(); //Battle WIN
-                }
-            }
-            if (player.getHP() <= 0)
-            {
-                //Game over?
-                playerLost = true;
-                if (keyboardState.IsKeyDown(Keys.Enter) && lastState.IsKeyUp(Keys.Enter))
-                {
-                    game.Reset(); //Battle LOST
-                }
-            }
-
             /*BATTLE SEQUENCE*/
-            if (turn == 0) //player's turn
+            if ((playerWon != true) && (playerLost != true))
             {
-                if (time >= timeToWait)
+                if (turn == 0) //player's turn
                 {
                     if (keyboardState.IsKeyDown(Keys.Up) && lastState.IsKeyUp(Keys.Up))
                     {
@@ -129,16 +109,37 @@ namespace RPG
                         time = 0;
                     }
                 }
-            }
-            if (turn == 1)
-            {
-                if (time >= timeToWait)
+                else if (turn == 1)
                 {
-                    enemy.AI(player);
-                    turn = 0;
-                    time = 0;
+                    if (time >= timeToWait)
+                    {
+                        enemy.AI(player);
+                        turn = 0;
+                        time = 0;
+                        messageOKHit = Convert.ToBoolean(Game1.MessageBox(new IntPtr(0), String.Format("{0} just attacked you for {1} damage!", enemy.getName(), enemy.getAttack()), "Enemy Attack!", 0));
+                    }
                 }
             }
+
+            if (enemy.getHP() <= 0)
+            {
+                playerWon = true;
+                if (keyboardState.IsKeyDown(Keys.Enter) && lastState.IsKeyUp(Keys.Enter))
+                {
+                    game.CombatEnd(); //Battle WIN
+                }
+            }
+
+            else if (player.getHP() <= 0)
+            {
+                //Game over?
+                playerLost = true;
+                if (keyboardState.IsKeyDown(Keys.Enter) && lastState.IsKeyUp(Keys.Enter))
+                {
+                    game.Reset(); //Battle LOST
+                }
+            }
+
             lastState = keyboardState;
         }
 

@@ -127,6 +127,24 @@
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\GameScreen\LevelTwoTut.xnb</Output>
       <Time>2013-04-30T00:26:53.8876061-04:00</Time>
     </Item>
+    <Item>
+      <Source>Scenes\FinalBossWinScreen.png</Source>
+      <Name>Scenes\FinalBossWinScreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\FinalBossWinScreen.xnb</Output>
+      <Time>2013-04-30T00:59:59.4551741-04:00</Time>
+    </Item>
+    <Item>
+      <Source>CombatScreen\CombatLost.png</Source>
+      <Name>CombatScreen\CombatLost</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatScreen\CombatLost.xnb</Output>
+      <Time>2013-04-30T00:59:59.453174-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

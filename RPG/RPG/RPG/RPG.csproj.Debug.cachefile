@@ -12,3 +12,5 @@ Content\Sprites\HealthPot32.xnb
 Content\CombatScreen\menuFont.xnb
 Content\GameScreen\LevelOneTut.xnb
 Content\GameScreen\LevelTwoTut.xnb
+Content\Scenes\FinalBossWinScreen.xnb
+Content\CombatScreen\CombatLost.xnb
