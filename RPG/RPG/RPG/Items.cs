@@ -10,17 +10,23 @@ namespace RPG
 {
     class Items
     {
+        enum itemType
+        {
+            Diamond = 1,
+            HealthPot = 2
+        }
+
+        itemType type;
         Texture2D item;
         int heal=20;
-        int diamondOrPot; //0 for diamond, 1 for pot
         public Vector2 position;
         public Rectangle itemRectangle;
 
-        public Items(Texture2D sprite, Vector2 pos, int type)
+        public Items(Texture2D sprite, Vector2 pos, itemType newType)
         {
             item = sprite;
             position = pos;
-            diamondOrPot = type;
+            type = newType;
         }
     }
 }
