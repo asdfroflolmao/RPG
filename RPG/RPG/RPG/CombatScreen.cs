@@ -15,9 +15,11 @@ namespace RPG
     class CombatScreen
     {
         private Game1 game;
+        private Texture2D playerSprite;
+        private Texture2D enemySprite;
         private Texture2D texture;
         private Texture2D combatWin;
-        private Texture2D combatLost;        
+        private Texture2D combatLost;
         private KeyboardState lastState;
         SpriteFont menufont;
         int activeItem = 0;
@@ -25,7 +27,7 @@ namespace RPG
         Enemy enemy;
         private bool playerWon = false;
         private bool playerLost = false;
-        private bool messageOKHit = false;
+        private bool messageShown = false;
         
         //Health Bars
         private Texture2D healthTexture;
@@ -55,6 +57,9 @@ namespace RPG
             healthTexture = game.Content.Load<Texture2D>(@"Sprites\Bar");
             combatWin = game.Content.Load<Texture2D>(@"CombatScreen\CombatWin");
             combatLost = game.Content.Load<Texture2D>(@"CombatScreen\CombatLost");
+            playerSprite = game.Content.Load<Texture2D>(@"Sprites\Player");
+            enemySprite = game.Content.Load<Texture2D>(@"Sprites\Enemy");
+
             lastState = Keyboard.GetState();
             
             player = igplayer;
@@ -111,12 +116,19 @@ namespace RPG
                 }
                 else if (turn == 1)
                 {
+                    if (!messageShown)
+                    {
+                        Convert.ToBoolean(Game1.MessageBox(new IntPtr(0), String.Format("{0} just attacked you for {1} damage!", enemy.getName(), enemy.getAttack()), "Enemy Attack!", 0));
+                        messageShown = true;
+                    }
+                    
+
                     if (time >= timeToWait)
                     {
                         enemy.AI(player);
                         turn = 0;
                         time = 0;
-                        messageOKHit = Convert.ToBoolean(Game1.MessageBox(new IntPtr(0), String.Format("{0} just attacked you for {1} damage!", enemy.getName(), enemy.getAttack()), "Enemy Attack!", 0));
+                        messageShown = false;
                     }
                 }
             }
@@ -176,6 +188,7 @@ namespace RPG
                 spriteBatch.Draw(healthTexture, playerHealthRectangle, Color.Red);
                 spriteBatch.DrawString(menufont, "You: " + player.getName(), new Vector2(50, 150), Color.White);
                 spriteBatch.DrawString(menufont, "HP: " + player.getHP(), new Vector2(50, 175), Color.White);
+                
             }
         }
 

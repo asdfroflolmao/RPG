@@ -10,6 +10,7 @@ namespace RPG
 {
     class Enemy
     {
+        bool isBoss = false;
         string name = string.Empty;
         Texture2D enemy;
         int health = 100;
@@ -30,8 +31,9 @@ namespace RPG
 
         int turnCounter = 0;
 
-        public Enemy(Texture2D sprite, Vector2 pos, string newName)
+        public Enemy(Texture2D sprite, Vector2 pos, string newName, bool boss = false)
         {
+            isBoss = boss;
             name = newName;
             enemy = sprite;
             position = pos;
@@ -46,9 +48,9 @@ namespace RPG
 
         public void AI(Player player)
         {
-            if(turnCounter==0)
+            if (turnCounter==0) //Attack
                 player.setHP(attack);
-            if (turnCounter == 1)
+            else if (turnCounter == 1) //Magic
                 player.setHP(attack);
             else
                 player.setHP(attack);
