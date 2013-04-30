@@ -29,15 +29,6 @@
       <Time>2013-04-29T16:14:29.4713854-04:00</Time>
     </Item>
     <Item>
-      <Source>Scenes\CombatScreen.png</Source>
-      <Name>Scenes\CombatScreen</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\CombatScreen.xnb</Output>
-      <Time>2013-04-30T13:51:46.863846-04:00</Time>
-    </Item>
-    <Item>
       <Source>Sprites\PlayerSheet.png</Source>
       <Name>Sprites\PlayerSheet</Name>
       <Importer>TextureImporter</Importer>
@@ -54,15 +45,6 @@
       <Options>None</Options>
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Textures\tileset.xnb</Output>
       <Time>2013-04-29T16:14:29.4743855-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Scenes\MainMenu.png</Source>
-      <Name>Scenes\MainMenu</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\MainMenu.xnb</Output>
-      <Time>2013-04-30T14:07:41.9904761-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Enemy.png</Source>
@@ -110,6 +92,15 @@
       <Time>2013-04-30T10:35:41.53897-04:00</Time>
     </Item>
     <Item>
+      <Source>Scenes\FinalBossWinScreen.png</Source>
+      <Name>Scenes\FinalBossWinScreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\FinalBossWinScreen.xnb</Output>
+      <Time>2013-04-30T15:19:15.9839447-04:00</Time>
+    </Item>
+    <Item>
       <Source>Sprites\EnemyBoss.png</Source>
       <Name>Sprites\EnemyBoss</Name>
       <Importer>TextureImporter</Importer>
@@ -137,22 +128,22 @@
       <Time>2013-04-30T11:04:52.7111313-04:00</Time>
     </Item>
     <Item>
-      <Source>CombatScreen\menuFont.spritefont</Source>
-      <Name>CombatScreen\menuFont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatScreen\menuFont.xnb</Output>
-      <Time>2013-04-29T16:14:29.4613848-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Scenes\FinalBossWinScreen.png</Source>
-      <Name>Scenes\FinalBossWinScreen</Name>
+      <Source>Scenes\CombatScreen.png</Source>
+      <Name>Scenes\CombatScreen</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\FinalBossWinScreen.xnb</Output>
-      <Time>2013-04-30T15:19:15.9839447-04:00</Time>
+      <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\CombatScreen.xnb</Output>
+      <Time>2013-04-30T13:51:46.863846-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Scenes\MainMenu.png</Source>
+      <Name>Scenes\MainMenu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\MainMenu.xnb</Output>
+      <Time>2013-04-30T14:07:41.9904761-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\BossDiamond.png</Source>
@@ -162,6 +153,15 @@
       <Options>None</Options>
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\BossDiamond.xnb</Output>
       <Time>2013-04-30T13:58:39.5894526-04:00</Time>
+    </Item>
+    <Item>
+      <Source>CombatScreen\menuFont.spritefont</Source>
+      <Name>CombatScreen\menuFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatScreen\menuFont.xnb</Output>
+      <Time>2013-04-29T16:14:29.4613848-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

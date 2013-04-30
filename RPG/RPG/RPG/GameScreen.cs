@@ -95,7 +95,7 @@ namespace RPG
                         enemyArray = new Enemy[2];
                         //insert 2 enemies diff positions{enemy};
 
-                        enemyArray[0] = new Enemy(enemySprite, new Vector2(500 - enemySprite.Width, 300), "Ahnold Schwartzgenheimer");
+                        enemyArray[0] = new Enemy(enemySprite, new Vector2(500 - enemySprite.Width, 300), "Chuck Norris");
                         enemyArray[1] = new Enemy(enemySprite, new Vector2(200 - enemySprite.Width, 70), "Rocky Balboa");
                         healthPot = new Items(healthSprite, new Vector2(400, 400), itemType.HealthPot);
                         allDead = false;
@@ -123,7 +123,7 @@ namespace RPG
 
                         enemyArray[0] = new Enemy(enemySprite, new Vector2(230 - enemySprite.Width, 200), "Christian Bale");
                         enemyArray[1] = new Enemy(enemySprite, new Vector2(230 - enemySprite.Width, 30), "Samuel L. Jackson");
-                        enemyArray[2] = new Enemy(enemySprite, new Vector2(600 - enemySprite.Width, 30), "Spiderman");
+                        enemyArray[2] = new Enemy(enemySprite, new Vector2(600 - enemySprite.Width, 30), "James Franco");
                         healthPot = new Items(healthSprite, new Vector2(400, 400), itemType.HealthPot);
                         allDead = false;
                     }
@@ -147,10 +147,10 @@ namespace RPG
                         //player.setHP(-100);//////////DEBUG PURPOSES ONLY
                         enemyArray = new Enemy[4];
                         ////////////////////////////////////////////////////////////////////////////////////EDIT THESES NAMES
-                        enemyArray[0] = new Enemy(enemySprite, new Vector2(0, 0), "Christian Bale");
-                        enemyArray[1] = new Enemy(enemySprite, new Vector2(800 - enemySprite.Width, 0), "Samuel L. Jackson");
-                        enemyArray[2] = new Enemy(enemySprite, new Vector2(0, 600 - enemySprite.Height), "Spiderman");
-                        enemyArray[3] = new Enemy(enemySprite, new Vector2(800 - enemySprite.Width, 600 - enemySprite.Height), "Superman");
+                        enemyArray[0] = new Enemy(enemySprite, new Vector2(0, 0), "Leonardo DiCaprio");
+                        enemyArray[1] = new Enemy(enemySprite, new Vector2(800 - enemySprite.Width, 0), "Joseph Gordon-Levitt");
+                        enemyArray[2] = new Enemy(enemySprite, new Vector2(0, 600 - enemySprite.Height), "Robert Downey Jr.");
+                        enemyArray[3] = new Enemy(enemySprite, new Vector2(800 - enemySprite.Width, 600 - enemySprite.Height), "Gerard Butler");
                         healthPot = new Items(healthSprite, new Vector2((Constants.gameWindowWidth / 2 + 50), Constants.gameWindowHeight / 2), itemType.HealthPot);
                         allDead = false;
                     }
@@ -175,7 +175,7 @@ namespace RPG
                         //player.setHP(-100);//////////DEBUG PURPOSES ONLY
                         enemyArray = new Enemy[1];
                         ////////////////////////////////////////////////////////////////////////////////////EDIT THESES NAMES
-                        enemyArray[0] = new Enemy(enemyBOSSSprite, new Vector2(Constants.gameWindowWidth / 2 - (enemyBOSSSprite.Width / 2), 0), "BOSSMAN", true);
+                        enemyArray[0] = new Enemy(enemyBOSSSprite, new Vector2(Constants.gameWindowWidth / 2 - (enemyBOSSSprite.Width / 2), 0), "Bob the Blob", true);
                         healthPot = new Items(healthSprite, new Vector2(Constants.gameWindowWidth / 2 - (healthSprite.Width / 2), 400), itemType.HealthPot);
                         allDead = false;
                     }
