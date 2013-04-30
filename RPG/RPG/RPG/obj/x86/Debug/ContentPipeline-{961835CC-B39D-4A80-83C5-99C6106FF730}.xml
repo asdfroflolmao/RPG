@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatScreen\CombatWin.xnb</Output>
-      <Time>2013-04-23T16:25:23.9658054-04:00</Time>
+      <Time>2013-04-30T12:43:42.9443246-04:00</Time>
     </Item>
     <Item>
       <Source>Scenes\CombatScreen.png</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\CombatScreen.xnb</Output>
-      <Time>2013-04-23T16:25:23.9728058-04:00</Time>
+      <Time>2013-04-30T13:56:34.1793449-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\PlayerSheet.png</Source>
@@ -125,7 +125,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatScreen\CombatLost.xnb</Output>
-      <Time>2013-04-30T02:04:40.7326782-04:00</Time>
+      <Time>2013-04-30T12:43:42.9413244-04:00</Time>
     </Item>
     <Item>
       <Source>CombatScreen\menuFont.spritefont</Source>

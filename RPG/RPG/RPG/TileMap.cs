@@ -151,6 +151,56 @@ namespace RPG
                 { Rows[10].Columns[s].TileID = 1; }
 
             }
+            if (level == 5)
+            {
+                Rows = new List<MapRow>();
+                for (int y = 0; y < MapHeight; y++)
+                {
+                    MapRow thisRow = new MapRow();
+                    for (int x = 0; x < MapWidth; x++)
+                    {
+                        thisRow.Columns.Add(new MapCell(2));
+                    }
+                    Rows.Add(thisRow);
+                }
+                for (int i = 0; i < 50; i++)
+                {
+                    Rows[i].Columns[11].TileID = 1;
+                    Rows[i].Columns[12].TileID = 1;
+                    Rows[i].Columns[13].TileID = 1;
+                }
+
+                Rows[0].Columns[9].TileID = 3;
+                Rows[0].Columns[10].TileID = 3;
+                Rows[0].Columns[11].TileID = 3;
+                Rows[0].Columns[12].TileID = 3;
+                Rows[0].Columns[13].TileID = 3;
+                Rows[0].Columns[14].TileID = 3;
+                Rows[0].Columns[15].TileID = 3;
+                Rows[1].Columns[9].TileID = 3;
+                Rows[1].Columns[10].TileID = 3;
+                Rows[1].Columns[11].TileID = 3;
+                Rows[1].Columns[12].TileID = 3;
+                Rows[1].Columns[13].TileID = 3;
+                Rows[1].Columns[14].TileID = 3;
+                Rows[1].Columns[15].TileID = 3;
+                Rows[2].Columns[10].TileID = 3;
+                Rows[2].Columns[11].TileID = 3;
+                Rows[2].Columns[12].TileID = 3;
+                Rows[2].Columns[13].TileID = 3;
+                Rows[2].Columns[14].TileID = 3;
+                Rows[0].Columns[8].TileID = 1;
+                Rows[0].Columns[16].TileID = 1;
+                Rows[1].Columns[8].TileID = 1;
+                Rows[1].Columns[16].TileID = 1;
+                Rows[2].Columns[9].TileID = 1;
+                Rows[2].Columns[15].TileID = 1;
+                Rows[3].Columns[10].TileID = 1;
+                Rows[3].Columns[14].TileID = 1;
+
+
+            }
+
 
         }
 

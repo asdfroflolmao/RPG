@@ -71,17 +71,30 @@ namespace RPG
             {
                 if (enemyArray[0] == null)
                 {
-                    allDead = true;
-                    level = 2;
-                    myMap = new TileMap(level);
-                    player.position = player.startPosition;//go back to start position
-                    //player.setHP(-100);//////////DEBUG PURPOSES ONLY
-                    enemyArray = new Enemy[2];
-                    //insert 2 enemies diff positions{enemy};
+                    //allDead = true;
+                    //level = 2;
+                    //myMap = new TileMap(level);
+                    //player.position = player.startPosition;//go back to start position
+                    ////player.setHP(-100);//////////DEBUG PURPOSES ONLY
+                    //enemyArray = new Enemy[2];
+                    ////insert 2 enemies diff positions{enemy};
 
-                    enemyArray[0] = new Enemy(enemySprite, new Vector2(500 - enemySprite.Width, 300), "Ahnold Schwartzgenheimer");
-                    enemyArray[1] = new Enemy(enemySprite, new Vector2(200 - enemySprite.Width, 70), "Rocky Balboa");
-                    healthPot = new Items(healthSprite, new Vector2(400, 400), itemType.HealthPot);
+                    //enemyArray[0] = new Enemy(enemySprite, new Vector2(500 - enemySprite.Width, 300), "Ahnold Schwartzgenheimer");
+                    //enemyArray[1] = new Enemy(enemySprite, new Vector2(200 - enemySprite.Width, 70), "Rocky Balboa");
+                    //healthPot = new Items(healthSprite, new Vector2(400, 400), itemType.HealthPot);
+                    //allDead = false;
+
+
+                    allDead = true;
+                    level = 5;
+                    myMap = new TileMap(level);
+                    player.position.X = Constants.gameWindowWidth / 2 - (player.playerRectangle.Width / 2);//go back to start position
+                    player.position.Y = 600;
+                    //player.setHP(-100);//////////DEBUG PURPOSES ONLY
+                    enemyArray = new Enemy[1];
+                    ////////////////////////////////////////////////////////////////////////////////////EDIT THESES NAMES
+                    enemyArray[0] = new Enemy(enemyBOSSSprite, new Vector2(Constants.gameWindowWidth / 2 - (enemyBOSSSprite.Width / 2), 0), "BOSSMAN", true);
+                    diamondDrop = new Items(healthSprite, new Vector2(400, 400), itemType.Diamond);
                     allDead = false;
 
                 }
