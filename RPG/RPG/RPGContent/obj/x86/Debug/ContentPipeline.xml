@@ -110,15 +110,6 @@
       <Time>2013-04-30T10:35:41.53897-04:00</Time>
     </Item>
     <Item>
-      <Source>CombatScreen\FinalBossWinScreen.png</Source>
-      <Name>CombatScreen\FinalBossWinScreen</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatScreen\FinalBossWinScreen.xnb</Output>
-      <Time>2013-04-30T10:35:41.5359698-04:00</Time>
-    </Item>
-    <Item>
       <Source>Sprites\EnemyBoss.png</Source>
       <Name>Sprites\EnemyBoss</Name>
       <Importer>TextureImporter</Importer>
@@ -153,6 +144,24 @@
       <Options>None</Options>
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatScreen\menuFont.xnb</Output>
       <Time>2013-04-29T16:14:29.4613848-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Scenes\FinalBossWinScreen.png</Source>
+      <Name>Scenes\FinalBossWinScreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\FinalBossWinScreen.xnb</Output>
+      <Time>2013-04-30T15:19:15.9839447-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\BossDiamond.png</Source>
+      <Name>Sprites\BossDiamond</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\BossDiamond.xnb</Output>
+      <Time>2013-04-30T13:58:39.5894526-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
