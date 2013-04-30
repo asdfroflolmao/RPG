@@ -111,6 +111,47 @@ namespace RPG
                 Rows[4].Columns[14].TileID = 2;
             }
 
+            if (level == 4) /// water level.
+            {
+                Rows = new List<MapRow>();
+                for (int y = 0; y < MapHeight; y++)
+                {
+                    MapRow thisRow = new MapRow();
+                    for (int x = 0; x < MapWidth; x++)
+                    {
+                        thisRow.Columns.Add(new MapCell(2));
+                    }
+                    Rows.Add(thisRow);
+                }
+
+                for (int i = 0; i < 50; i++)
+                { Rows[0].Columns[i].TileID = 1; }
+                for (int j = 0; j < 50; j++)
+                { Rows[18].Columns[j].TileID = 1; }
+                for (int k = 0; k < 50; k++)
+                { Rows[k].Columns[0].TileID = 1; }
+                for (int l = 0; l < 50; l++)
+                { Rows[l].Columns[24].TileID = 1; }
+
+          
+                for (int m = 0; m < 11; m++)
+                { Rows[m].Columns[m].TileID = 1; }
+                for (int n = 0; n < 11; n++)
+                { Rows[18-n].Columns[n].TileID = 1; }
+                for (int o = 0; o < 11; o++)
+                { Rows[o].Columns[24-o].TileID = 1; }
+                for (int p = 0; p < 11; p++)
+                { Rows[18 - p].Columns[24-p].TileID = 1; }
+
+                for (int q = 8; q < 17; q++)
+                { Rows[8].Columns[q].TileID = 1; }
+                for (int r = 8; r < 17; r++)
+                { Rows[9].Columns[r].TileID = 1; }
+                for (int s = 8; s < 17; s++)
+                { Rows[10].Columns[s].TileID = 1; }
+
+            }
+
         }
 
 

@@ -83,6 +83,7 @@ namespace RPG
                     enemyArray[1] = new Enemy(enemySprite, new Vector2(200 - enemySprite.Width, 70), "Rocky Balboa");
                     healthPot = new Items(healthSprite, new Vector2(400, 400), itemType.HealthPot);
                     allDead = false;
+
                 }
 
             }
@@ -120,14 +121,15 @@ namespace RPG
                     allDead = true;
                     level = 4;
                     myMap = new TileMap(level);
-                    player.position = player.startPosition;//go back to start position
+                    player.position.X = (Constants.gameWindowWidth / 2);//go back to start position
+                    player.position.Y = (Constants.gameWindowHeight / 2);
                     //player.setHP(-100);//////////DEBUG PURPOSES ONLY
                     enemyArray = new Enemy[4];
                     ////////////////////////////////////////////////////////////////////////////////////EDIT THESES NAMES
-                    enemyArray[0] = new Enemy(enemyBOSSSprite, new Vector2(230 - enemySprite.Width, 200), "Christian Bale");
-                    enemyArray[1] = new Enemy(enemySprite, new Vector2(230 - enemySprite.Width, 30), "Samuel L. Jackson");
-                    enemyArray[2] = new Enemy(enemySprite, new Vector2(600 - enemySprite.Width, 30), "Spiderman");
-                    enemyArray[3] = new Enemy(enemySprite, new Vector2(600 - enemySprite.Width, 30), "Superman");
+                    enemyArray[0] = new Enemy(enemySprite, new Vector2(0, 0), "Christian Bale");
+                    enemyArray[1] = new Enemy(enemySprite, new Vector2(800 - enemySprite.Width, 0), "Samuel L. Jackson");
+                    enemyArray[2] = new Enemy(enemySprite, new Vector2(0, 600 - enemySprite.Height), "Spiderman");
+                    enemyArray[3] = new Enemy(enemySprite, new Vector2(800 - enemySprite.Width, 600 - enemySprite.Height), "Superman");
 
                     allDead = false;
                 }
