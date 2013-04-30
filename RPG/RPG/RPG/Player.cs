@@ -140,6 +140,11 @@ namespace RPG
             health -= damageValue;
         }
 
+        public void healHP(int healValue)
+        {
+            health += healValue;
+        }
+
         public int getAttack()
         {
             return attack;
