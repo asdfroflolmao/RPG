@@ -91,7 +91,7 @@ namespace RPG
             {
                 if (healthPot != null && player.playerRectangle.Intersects(healthPot.itemRectangle))
                 {
-                    player.healHP(healthPot.heal);
+                    player.HealHealth(healthPot.heal);
                     Game1.MessageBox(new IntPtr(0), String.Format("You just healed for {0} health!", healthPot.heal), "Health Pot", 0);
                     healthPot = null;
                 }

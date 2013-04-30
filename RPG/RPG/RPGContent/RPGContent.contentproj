@@ -58,13 +58,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Scenes\CombatScreen.png">
-      <Name>CombatScreen</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Sprites\PlayerSheet.png">
       <Name>PlayerSheet</Name>
       <Importer>TextureImporter</Importer>
@@ -144,6 +137,13 @@
   <ItemGroup>
     <Compile Include="CombatScreen\CombatLost.png">
       <Name>CombatLost</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Scenes\CombatScreen.png">
+      <Name>CombatScreen</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

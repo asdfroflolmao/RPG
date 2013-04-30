@@ -49,15 +49,15 @@ namespace RPG
         public void AI(Player player)
         {
             if (turnCounter==0) //Attack
-                player.setHP(attack);
+                player.SetHealth(attack);
             else if (turnCounter == 1) //Magic
-                player.setHP(attack);
+                player.SetHealth(attack);
             else
-                player.setHP(attack);
+                player.SetHealth(attack);
             turnCounter++;
         }
         
-        public int getHP()
+        public int GetHealth()
         {
             return health;
         }
@@ -67,19 +67,24 @@ namespace RPG
         //    return mana;
         //}
         
-        public void setHP(int damageValue)
+        public void SetHealth(int damageValue)
         {
             health -= damageValue;
         }
 
-        public int getAttack()
+        public int GetAttack()
         {
             return attack;
         }
 
-        public string getName()
+        public string GetName()
         {
             return name;
+        }
+
+        public bool IsBoss()
+        {
+            return isBoss;
         }
     }
 }

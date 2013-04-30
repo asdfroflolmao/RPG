@@ -125,7 +125,7 @@ namespace RPG
             playerSprite.Draw(player, position, new Rectangle(currentFrame.X * frameSize.X, currentFrame.Y * frameSize.Y, frameSize.X, frameSize.Y), Color.White, 0, Vector2.Zero, 1, SpriteEffects.None, 0);
         }
 
-        public int getHP()
+        public int GetHealth()
         {
             return health;
         }
@@ -135,27 +135,27 @@ namespace RPG
         //    return mana;
         //}
 
-        public void setHP(int damageValue)
+        public void SetHealth(int damageValue)
         {
             health -= damageValue;
         }
 
-        public void healHP(int healValue)
+        public void HealHealth(int healValue)
         {
             health += healValue;
         }
 
-        public int getAttack()
+        public int GetAttack()
         {
             return attack;
         }
 
-        public int getMAttack()
+        public int GetMagicAttack()
         {
             return magicAtk;
         }
 
-        public string getName()
+        public string GetName()
         {
             return name;
         }

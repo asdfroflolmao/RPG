@@ -58,17 +58,21 @@ namespace RPG
             combatWin = game.Content.Load<Texture2D>(@"CombatScreen\CombatWin");
             combatLost = game.Content.Load<Texture2D>(@"CombatScreen\CombatLost");
             playerSprite = game.Content.Load<Texture2D>(@"Sprites\Player");
-            enemySprite = game.Content.Load<Texture2D>(@"Sprites\Enemy");
+
+            if (igenemy.IsBoss())
+                enemySprite = game.Content.Load<Texture2D>(@"Sprites\EnemyBoss");
+            else
+                enemySprite = game.Content.Load<Texture2D>(@"Sprites\Enemy");
 
             lastState = Keyboard.GetState();
             
             player = igplayer;
-            playerStartHp = player.getHP();
+            playerStartHp = player.GetHealth();
             playerHealthBackgroundRectangle = new Rectangle(50, 145 - Constants.hpBarHeight, Constants.hpBarWidth, 20);
             enemyHealthBackgroundRectangle = new Rectangle(450, 145 - Constants.hpBarHeight, Constants.hpBarWidth, 20);
 
             enemy = igenemy;
-            enemyStartHp = enemy.getHP();
+            enemyStartHp = enemy.GetHealth();
         }
 
         public void Update(GameTime gameTime)
@@ -76,8 +80,8 @@ namespace RPG
             elapsedTime = gameTime.ElapsedGameTime.Milliseconds;
             time += elapsedTime;
 
-            int playerHpBarWidth = (player.getHP() * Constants.hpBarWidth / playerStartHp);
-            int enemyHpBarWidth = (enemy.getHP() * Constants.hpBarWidth / enemyStartHp);
+            int playerHpBarWidth = (player.GetHealth() * Constants.hpBarWidth / playerStartHp);
+            int enemyHpBarWidth = (enemy.GetHealth() * Constants.hpBarWidth / enemyStartHp);
 
             playerHealthRectangle = new Rectangle(50, 145 - Constants.hpBarHeight, playerHpBarWidth, 20);
             enemyHealthRectangle = new Rectangle(450, 145 - Constants.hpBarHeight, enemyHpBarWidth, 20);
@@ -103,9 +107,9 @@ namespace RPG
                     if (keyboardState.IsKeyDown(Keys.Enter) && lastState.IsKeyUp(Keys.Enter))
                     {
                         if (activeItem == 0)
-                            enemy.setHP(player.getAttack());//decrease enemy health by player.attack
+                            enemy.SetHealth(player.GetAttack());//decrease enemy health by player.attack
                         if (activeItem == 1)
-                            enemy.setHP(player.getMAttack());//decrease enemy health by player.magic
+                            enemy.SetHealth(player.GetMagicAttack());//decrease enemy health by player.magic
                         //if (activeItem == 2)
                         //    ;//pop item selection
                         //if (activeItem == 3)
@@ -118,7 +122,7 @@ namespace RPG
                 {
                     if (!messageShown)
                     {
-                        Convert.ToBoolean(Game1.MessageBox(new IntPtr(0), String.Format("{0} just attacked you for {1} damage!", enemy.getName(), enemy.getAttack()), "Enemy Attack!", 0));
+                        Convert.ToBoolean(Game1.MessageBox(new IntPtr(0), String.Format("{0} just attacked you for {1} damage!", enemy.GetName(), enemy.GetAttack()), "Enemy Attack!", 0));
                         messageShown = true;
                     }
                     
@@ -133,7 +137,7 @@ namespace RPG
                 }
             }
 
-            if (enemy.getHP() <= 0)
+            if (enemy.GetHealth() <= 0)
             {
                 playerWon = true;
                 if (keyboardState.IsKeyDown(Keys.Escape) && lastState.IsKeyUp(Keys.Escape))
@@ -142,7 +146,7 @@ namespace RPG
                 }
             }
 
-            else if (player.getHP() <= 0)
+            else if (player.GetHealth() <= 0)
             {
                 //Game over?
                 playerLost = true;
@@ -179,15 +183,20 @@ namespace RPG
                 //*****ENEMY STATS*****//
                 spriteBatch.Draw(healthTexture, enemyHealthBackgroundRectangle, Color.White);
                 spriteBatch.Draw(healthTexture, enemyHealthRectangle, Color.Red);
-                spriteBatch.DrawString(menufont, "Enemy: " + enemy.getName(), new Vector2(450, 150), Color.White);
-                spriteBatch.DrawString(menufont, "HP: " + enemy.getHP(), new Vector2(450, 175), Color.White);
+                spriteBatch.DrawString(menufont, "Enemy: " + enemy.GetName(), new Vector2(450, 150), Color.White);
+                spriteBatch.DrawString(menufont, "HP: " + enemy.GetHealth(), new Vector2(450, 175), Color.White);
                 //spriteBatch.DrawString(menufont, "MP: " + enemy.getMANA(), new Vector2(game.GraphicsDevice.Viewport.Width / 2-50, game.GraphicsDevice.Viewport.Height / 2-300), Color.White);
+                
+                if (!enemy.IsBoss())
+                    spriteBatch.Draw(enemySprite, new Rectangle(460, 250, 105, 155), Color.White);
+                
 
                 //*****PLAYER STATS*****//
                 spriteBatch.Draw(healthTexture, playerHealthBackgroundRectangle, Color.White);
                 spriteBatch.Draw(healthTexture, playerHealthRectangle, Color.Red);
-                spriteBatch.DrawString(menufont, "You: " + player.getName(), new Vector2(50, 150), Color.White);
-                spriteBatch.DrawString(menufont, "HP: " + player.getHP(), new Vector2(50, 175), Color.White);
+                spriteBatch.DrawString(menufont, "You: " + player.GetName(), new Vector2(50, 150), Color.White);
+                spriteBatch.DrawString(menufont, "HP: " + player.GetHealth(), new Vector2(50, 175), Color.White);
+                spriteBatch.Draw(playerSprite, new Rectangle(60, 250, 105, 155), Color.White);
                 
             }
         }

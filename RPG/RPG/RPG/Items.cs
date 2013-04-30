@@ -18,7 +18,7 @@ namespace RPG
     {
         itemType type;
         Texture2D item;
-        public int heal = 20;
+        public int heal = 100;
         public Vector2 position;
         public Rectangle itemRectangle;
 
