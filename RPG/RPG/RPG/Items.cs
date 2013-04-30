@@ -8,14 +8,14 @@ using Microsoft.Xna.Framework.Input;
 
 namespace RPG
 {
+    enum itemType
+    {
+        Diamond = 1,
+        HealthPot = 2
+    }
+
     class Items
     {
-        enum itemType
-        {
-            Diamond = 1,
-            HealthPot = 2
-        }
-
         itemType type;
         Texture2D item;
         public int heal = 20;

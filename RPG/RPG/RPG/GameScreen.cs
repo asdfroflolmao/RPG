@@ -77,7 +77,7 @@ namespace RPG
 
                     enemyArray[0] = new Enemy(enemySprite, new Vector2(500 - enemySprite.Width, 300), "Ahnold Schwartzgenheimer");
                     enemyArray[1] = new Enemy(enemySprite, new Vector2(200 - enemySprite.Width, 70), "Rocky Balboa");
-                    healthPot = new Items(healthSprite, new Vector2(400, 400), HealthPot);
+                    healthPot = new Items(healthSprite, new Vector2(400, 400), itemType.HealthPot);
                     allDead = false;
                 }
 
