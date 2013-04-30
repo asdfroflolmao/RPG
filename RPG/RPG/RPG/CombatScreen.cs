@@ -192,7 +192,6 @@ namespace RPG
                 else
                     spriteBatch.Draw(enemySprite, new Rectangle(400, 220, 288, 288), Color.White);
                 
-
                 //*****PLAYER STATS*****//
                 spriteBatch.Draw(healthTexture, playerHealthBackgroundRectangle, Color.White);
                 spriteBatch.Draw(healthTexture, playerHealthRectangle, Color.Red);
