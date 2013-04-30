@@ -16,7 +16,7 @@ namespace RPG
         int attack = 10;
         int magicAtk = 30;
         //int mana;
-        int MOVESPEED = 5;
+        public int MOVESPEED = 5;
         public Vector2 position;
         public Vector2 startPosition;
         KeyboardState lastState;

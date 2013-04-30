@@ -74,6 +74,7 @@ namespace RPG
 
             if (gameWon)
             {
+                player.MOVESPEED = 20;
                 if (keyboardState.IsKeyDown(Keys.Escape) && lastState.IsKeyUp(Keys.Escape))
                 {
                     game.Reset(); //GAMEWINNER.
@@ -123,13 +124,19 @@ namespace RPG
                         enemyArray[0] = new Enemy(enemySprite, new Vector2(230 - enemySprite.Width, 200), "Christian Bale");
                         enemyArray[1] = new Enemy(enemySprite, new Vector2(230 - enemySprite.Width, 30), "Samuel L. Jackson");
                         enemyArray[2] = new Enemy(enemySprite, new Vector2(600 - enemySprite.Width, 30), "Spiderman");
-
+                        healthPot = new Items(healthSprite, new Vector2(400, 400), itemType.HealthPot);
                         allDead = false;
                     }
 
                 }
                 if (level == 3) //exists 1 health pot on map. 3 enemies, 3 diamond drop
                 {
+                    if (healthPot != null && player.playerRectangle.Intersects(healthPot.itemRectangle))
+                    {
+                        player.HealHealth(healthPot.heal);
+                        Game1.MessageBox(new IntPtr(0), String.Format("You just healed for {0} health!", healthPot.heal), "Health Pot", 0);
+                        healthPot = null;
+                    }
                     if (enemyArray[0] == null && enemyArray[1] == null && enemyArray[2] == null)
                     {
                         player.position.X = (Constants.gameWindowWidth / 2);//go back to start position
@@ -144,13 +151,19 @@ namespace RPG
                         enemyArray[1] = new Enemy(enemySprite, new Vector2(800 - enemySprite.Width, 0), "Samuel L. Jackson");
                         enemyArray[2] = new Enemy(enemySprite, new Vector2(0, 600 - enemySprite.Height), "Spiderman");
                         enemyArray[3] = new Enemy(enemySprite, new Vector2(800 - enemySprite.Width, 600 - enemySprite.Height), "Superman");
-
+                        healthPot = new Items(healthSprite, new Vector2((Constants.gameWindowWidth / 2 + 50), Constants.gameWindowHeight / 2), itemType.HealthPot);
                         allDead = false;
                     }
 
                 }
                 if (level == 4) //exists 1 health pot on map. 4 enemies, 4 diamond drop
                 {
+                    if (healthPot != null && player.playerRectangle.Intersects(healthPot.itemRectangle))
+                    {
+                        player.HealHealth(healthPot.heal);
+                        Game1.MessageBox(new IntPtr(0), String.Format("You just healed for {0} health!", healthPot.heal), "Health Pot", 0);
+                        healthPot = null;
+                    }
                     if (enemyArray[0] == null && enemyArray[1] == null && enemyArray[2] == null && enemyArray[3] == null)
                     {
                         player.position.X = Constants.gameWindowWidth / 2 - (player.playerRectangle.Width / 2);//go back to start position
@@ -163,14 +176,19 @@ namespace RPG
                         enemyArray = new Enemy[1];
                         ////////////////////////////////////////////////////////////////////////////////////EDIT THESES NAMES
                         enemyArray[0] = new Enemy(enemyBOSSSprite, new Vector2(Constants.gameWindowWidth / 2 - (enemyBOSSSprite.Width / 2), 0), "BOSSMAN", true);
-
+                        healthPot = new Items(healthSprite, new Vector2(Constants.gameWindowWidth / 2 - (healthSprite.Width / 2), 400), itemType.HealthPot);
                         allDead = false;
                     }
 
                 }
                 if (level == 5)
                 {
-                    Console.WriteLine("ALLDEAD IS: " + allDead.ToString());
+                    if (healthPot != null && player.playerRectangle.Intersects(healthPot.itemRectangle))
+                    {
+                        player.HealHealth(healthPot.heal);
+                        Game1.MessageBox(new IntPtr(0), String.Format("You just healed for {0} health!", healthPot.heal), "Health Pot", 0);
+                        healthPot = null;
+                    }
 
                     if (enemyArray[0] == null)
                     {
@@ -227,6 +245,18 @@ namespace RPG
             if (level == 2 && healthPot != null)
             {
                 spriteBatch.Draw(levelTwoTut, Vector2.Zero, Color.White);
+                healthPot.Draw(spriteBatch);
+            }
+            if (level == 3 && healthPot != null)
+            {
+                healthPot.Draw(spriteBatch);
+            }
+            if (level == 4 && healthPot != null)
+            {
+                healthPot.Draw(spriteBatch);
+            }
+            if (level == 5 && healthPot != null)
+            {
                 healthPot.Draw(spriteBatch);
             }
             if (level == 5 && BOSSdiamondDrop != null)
