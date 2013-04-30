@@ -18,7 +18,7 @@ namespace RPG
 
         itemType type;
         Texture2D item;
-        int heal=20;
+        public int heal = 20;
         public Vector2 position;
         public Rectangle itemRectangle;
 
@@ -27,6 +27,12 @@ namespace RPG
             item = sprite;
             position = pos;
             type = newType;
+            itemRectangle = new Rectangle((int)position.X, (int)position.Y, item.Width, item.Height);
         }
+        public void Draw(SpriteBatch enemySprite)
+        {
+            enemySprite.Draw(item, position, Color.White);
+        }
+
     }
 }

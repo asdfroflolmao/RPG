@@ -25,8 +25,11 @@ namespace RPG
         public Enemy enemy;
         Texture2D enemySprite;
         Texture2D diamondSprite;
-        Texture2D heathSprite;
+        Texture2D healthSprite;
         Texture2D levelOneTut;
+        public Items healthPot;
+        public Items diamondDrop;
+        int diamondCounter = 0; ////////////////// 10 DIAMONDS NEEDED TO BOSS BATTLE.
         KeyboardState lastState;
 
         TileMap myMap;
@@ -34,7 +37,7 @@ namespace RPG
         int squaresDown = 19;
 
         int level;
-        bool allDead=false;
+        bool allDead = false;
 
         public GameScreen(Game1 game)
         {
@@ -45,10 +48,12 @@ namespace RPG
             player = new Player(playerSprite);
             enemySprite = game.Content.Load<Texture2D>(@"Sprites\Enemy");
             enemy = new Enemy(enemySprite, new Vector2(390 - enemySprite.Width, 70), "Tinky Winky");
-            enemyArray = new Enemy[1]{enemy};
+            enemyArray = new Enemy[1] { enemy };
             Tile.TileSetTexture = game.Content.Load<Texture2D>(@"Textures\tileset");
             myMap = new TileMap(level);
             levelOneTut = game.Content.Load<Texture2D>(@"GameScreen\LevelOneTut");
+            diamondSprite = game.Content.Load<Texture2D>(@"Sprites\Diamond32");
+            healthSprite = game.Content.Load<Texture2D>(@"Sprites\HealthPot32");
 
             Game1.MessageBox(new IntPtr(0), "This is a sample message box! Go fuck yourself Albert. :D", "Sample", 0);
         }
@@ -58,7 +63,7 @@ namespace RPG
             KeyboardState keyboardState = Keyboard.GetState();
 
 
-            if (level == 1)
+            if (level == 1) //exists 1 enemy on map. 1 diamond drop.
             {
                 if (enemyArray[0] == null)
                 {
@@ -66,26 +71,32 @@ namespace RPG
                     level = 2;
                     myMap = new TileMap(level);
                     player.position = player.startPosition;//go back to start position
-                    player.setHP(-100);//////////DEBUG PURPOSES ONLY
+                    //player.setHP(-100);//////////DEBUG PURPOSES ONLY
                     enemyArray = new Enemy[2];
                     //insert 2 enemies diff positions{enemy};
 
                     enemyArray[0] = new Enemy(enemySprite, new Vector2(500 - enemySprite.Width, 300), "Ahnold Schwartzgenheimer");
                     enemyArray[1] = new Enemy(enemySprite, new Vector2(200 - enemySprite.Width, 70), "Rocky Balboa");
-
+                    healthPot = new Items(healthSprite, new Vector2(400, 400), HealthPot);
                     allDead = false;
                 }
 
             }
-            if (level == 2)
+            if (level == 2) //exists 1 health pot on map. 2 enemies, 2 diamond drop
             {
+                if (healthPot != null && player.playerRectangle.Intersects(healthPot.itemRectangle))
+                {
+                    player.healHP(healthPot.heal);
+                    healthPot = null;
+                }
+
                 if (enemyArray[0] == null && enemyArray[1] == null)
                 {
                     allDead = true;
                     level = 3;
                     myMap = new TileMap(level);
                     player.position = player.startPosition;//go back to start position
-                    player.setHP(-100);//////////DEBUG PURPOSES ONLY
+                    //player.setHP(-100);//////////DEBUG PURPOSES ONLY
                     enemyArray = new Enemy[3];
                     //insert 3 enemies diff positions{enemy};
 
@@ -97,7 +108,7 @@ namespace RPG
                 }
 
             }
-            if (level == 3)
+            if (level == 3) //exists 1 health pot on map. 3 enemies, 3 diamond drop
             {
                 if (enemyArray[0] == null && enemyArray[1] == null)
                 {
@@ -105,10 +116,10 @@ namespace RPG
                     level = 4;
                     myMap = new TileMap(level);
                     player.position = player.startPosition;//go back to start position
-                    player.setHP(-100);//////////DEBUG PURPOSES ONLY
+                    //player.setHP(-100);//////////DEBUG PURPOSES ONLY
                     enemyArray = new Enemy[3];
                     //insert 3 enemies diff positions{enemy};
-////////////////////////////////////////////////////////////////////////////////////EDIT THESES NAMES
+                    ////////////////////////////////////////////////////////////////////////////////////EDIT THESES NAMES
                     enemyArray[0] = new Enemy(enemySprite, new Vector2(230 - enemySprite.Width, 200), "Christian Bale");
                     enemyArray[1] = new Enemy(enemySprite, new Vector2(230 - enemySprite.Width, 30), "Samuel L. Jackson");
                     enemyArray[2] = new Enemy(enemySprite, new Vector2(600 - enemySprite.Width, 30), "Spiderman");
@@ -118,17 +129,16 @@ namespace RPG
                 }
 
             }
-                for (int j = 0; j < enemyArray.Length; j++)
+            for (int j = 0; j < enemyArray.Length; j++)
+            {
+
+                if (enemyArray[j] != null && player.playerRectangle.Intersects(enemyArray[j].enemyRectangle))// if player intersects enemy -> CombatScreen
                 {
-                    
-                    if (enemyArray[j] != null && player.playerRectangle.Intersects(enemyArray[j].enemyRectangle))// if player intersects enemy -> CombatScreen
-                    
-                    {
-                        game.CombatTime(j);
-                        enemyArray[j] = null;
-                    }
+                    game.CombatTime(j);
+                    enemyArray[j] = null;
                 }
-            
+            }
+
             lastState = keyboardState;
             player.Update(gameTime, game.GraphicsDevice);
         }
@@ -150,6 +160,10 @@ namespace RPG
             if (level == 1)
             {
                 spriteBatch.Draw(levelOneTut, Vector2.Zero, Color.White);
+            }
+            if (level == 2 && healthPot != null)
+            {
+                healthPot.Draw(spriteBatch);
             }
 
             //draw player
