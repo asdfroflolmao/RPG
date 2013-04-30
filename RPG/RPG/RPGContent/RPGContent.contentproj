@@ -107,7 +107,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CombatScreen\FinalBossWinScreen.png">
+    <Compile Include="Scenes\FinalBossWinScreen.png">
       <Name>FinalBossWinScreen</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -144,6 +144,13 @@
   <ItemGroup>
     <Compile Include="Scenes\MainMenu.png">
       <Name>MainMenu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sprites\BossDiamond.png">
+      <Name>BossDiamond</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
