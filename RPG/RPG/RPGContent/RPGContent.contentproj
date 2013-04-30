@@ -58,13 +58,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CombatScreen\CombatWin.png">
-      <Name>CombatWin</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Scenes\CombatScreen.png">
       <Name>CombatScreen</Name>
       <Importer>TextureImporter</Importer>
@@ -128,13 +121,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CombatScreen\CombatLost.png">
-      <Name>CombatLost</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="CombatScreen\FinalBossWinScreen.png">
       <Name>FinalBossWinScreen</Name>
       <Importer>TextureImporter</Importer>
@@ -144,6 +130,20 @@
   <ItemGroup>
     <Compile Include="Sprites\EnemyBoss.png">
       <Name>EnemyBoss</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CombatScreen\CombatWin.png">
+      <Name>CombatWin</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CombatScreen\CombatLost.png">
+      <Name>CombatLost</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

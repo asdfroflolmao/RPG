@@ -124,7 +124,7 @@ namespace RPG
             if (enemy.getHP() <= 0)
             {
                 playerWon = true;
-                if (keyboardState.IsKeyDown(Keys.Enter) && lastState.IsKeyUp(Keys.Enter))
+                if (keyboardState.IsKeyDown(Keys.Escape) && lastState.IsKeyUp(Keys.Escape))
                 {
                     game.CombatEnd(); //Battle WIN
                 }
@@ -134,7 +134,7 @@ namespace RPG
             {
                 //Game over?
                 playerLost = true;
-                if (keyboardState.IsKeyDown(Keys.Enter) && lastState.IsKeyUp(Keys.Enter))
+                if (keyboardState.IsKeyDown(Keys.Escape) && lastState.IsKeyUp(Keys.Escape))
                 {
                     game.Reset(); //Battle LOST
                 }
@@ -150,7 +150,7 @@ namespace RPG
                 spriteBatch.Draw(combatWin, Vector2.Zero, Color.White);
             }
 
-            if (playerLost)
+            else if (playerLost)
             {
                 spriteBatch.Draw(combatLost, Vector2.Zero, Color.White);
             }
@@ -158,7 +158,10 @@ namespace RPG
             else
             {
                 if (texture != null)
+                {
                     spriteBatch.Draw(texture, new Vector2(0f, 0f), Color.White);
+                }
+                
                 drawMenu(spriteBatch);
 
                 //*****ENEMY STATS*****//
