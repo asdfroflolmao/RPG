@@ -8,4 +8,6 @@ Content\Textures\tileset.xnb
 Content\Scenes\MainMenu.xnb
 Content\Sprites\Enemy.xnb
 Content\Sprites\Diamond32.xnb
+Content\Sprites\HealthPot32.xnb
 Content\CombatScreen\menuFont.xnb
+Content\GameScreen\LevelOneTut.xnb

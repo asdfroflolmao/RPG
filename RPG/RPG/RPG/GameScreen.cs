@@ -26,6 +26,7 @@ namespace RPG
         Texture2D enemySprite;
         Texture2D diamondSprite;
         Texture2D heathSprite;
+        Texture2D levelOneTut;
         KeyboardState lastState;
 
         TileMap myMap;
@@ -47,6 +48,7 @@ namespace RPG
             enemyArray = new Enemy[1]{enemy};
             Tile.TileSetTexture = game.Content.Load<Texture2D>(@"Textures\tileset");
             myMap = new TileMap(level);
+            levelOneTut = game.Content.Load<Texture2D>(@"GameScreen\LevelOneTut");
 
             Game1.MessageBox(new IntPtr(0), "This is a sample message box! Go fuck yourself Albert. :D", "Sample", 0);
         }
@@ -144,6 +146,12 @@ namespace RPG
                         Color.White);
                 }
             }
+
+            if (level == 1)
+            {
+                spriteBatch.Draw(levelOneTut, Vector2.Zero, Color.White);
+            }
+
             //draw player
             player.Draw(spriteBatch);
 

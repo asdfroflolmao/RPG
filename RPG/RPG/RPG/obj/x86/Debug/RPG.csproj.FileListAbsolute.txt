@@ -32,3 +32,5 @@ C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\Enem
 C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\Diamond32.xnb
 C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\Enemy.xnb
 C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\Diamond32.xnb
+C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\HealthPot32.xnb
+C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\GameScreen\LevelOneTut.xnb
