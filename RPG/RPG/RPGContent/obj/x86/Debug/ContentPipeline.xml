@@ -118,6 +118,15 @@
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\GameScreen\LevelOneTut.xnb</Output>
       <Time>2013-04-29T21:39:34.4443828-04:00</Time>
     </Item>
+    <Item>
+      <Source>GameScreen\LevelTwoTut.png</Source>
+      <Name>GameScreen\LevelTwoTut</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\GameScreen\LevelTwoTut.xnb</Output>
+      <Time>2013-04-30T00:26:53.8876061-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

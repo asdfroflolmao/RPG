@@ -119,8 +119,8 @@ namespace RPG
                             enemy.setHP(player.getMAttack());//decrease enemy health by player.magic
                         //if (activeItem == 2)
                         //    ;//pop item selection
-                        if (activeItem == 3)
-                            ;//do nothing. "defend"
+                        //if (activeItem == 3)
+                        //    ;//do nothing. "defend"
                         turn = 1;
                         time = 0;
                     }
@@ -131,7 +131,6 @@ namespace RPG
                 if (time >= timeToWait)
                 {
                     enemy.AI(player);
-                    Game1.MessageBox(new IntPtr(0), "Enemy Attacked you!", "ENEMY ATTACK", 0);
                     turn = 0;
                     time = 0;
                 }

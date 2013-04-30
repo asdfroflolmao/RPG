@@ -27,6 +27,7 @@ namespace RPG
         Texture2D diamondSprite;
         Texture2D healthSprite;
         Texture2D levelOneTut;
+        Texture2D levelTwoTut;
         public Items healthPot;
         public Items diamondDrop;
         int diamondCounter = 0; ////////////////// 10 DIAMONDS NEEDED TO BOSS BATTLE.
@@ -52,6 +53,7 @@ namespace RPG
             Tile.TileSetTexture = game.Content.Load<Texture2D>(@"Textures\tileset");
             myMap = new TileMap(level);
             levelOneTut = game.Content.Load<Texture2D>(@"GameScreen\LevelOneTut");
+            levelTwoTut = game.Content.Load<Texture2D>(@"GameScreen\LevelTwoTut");
             diamondSprite = game.Content.Load<Texture2D>(@"Sprites\Diamond32");
             healthSprite = game.Content.Load<Texture2D>(@"Sprites\HealthPot32");
 
@@ -87,6 +89,7 @@ namespace RPG
                 if (healthPot != null && player.playerRectangle.Intersects(healthPot.itemRectangle))
                 {
                     player.healHP(healthPot.heal);
+                    Game1.MessageBox(new IntPtr(0), String.Format("You just healed for {0} health!", healthPot.heal), "Health Pot", 0);
                     healthPot = null;
                 }
 
@@ -119,11 +122,11 @@ namespace RPG
                     //player.setHP(-100);//////////DEBUG PURPOSES ONLY
                     enemyArray = new Enemy[3];
                     //insert 3 enemies diff positions{enemy};
+
                     ////////////////////////////////////////////////////////////////////////////////////EDIT THESES NAMES
                     enemyArray[0] = new Enemy(enemySprite, new Vector2(230 - enemySprite.Width, 200), "Christian Bale");
                     enemyArray[1] = new Enemy(enemySprite, new Vector2(230 - enemySprite.Width, 30), "Samuel L. Jackson");
                     enemyArray[2] = new Enemy(enemySprite, new Vector2(600 - enemySprite.Width, 30), "Spiderman");
-                    enemyArray[3] = new Enemy(enemySprite, new Vector2(600 - enemySprite.Width, 30), "Spiderman");
 
                     allDead = false;
                 }
@@ -163,6 +166,7 @@ namespace RPG
             }
             if (level == 2 && healthPot != null)
             {
+                spriteBatch.Draw(levelTwoTut, Vector2.Zero, Color.White);
                 healthPot.Draw(spriteBatch);
             }
 
