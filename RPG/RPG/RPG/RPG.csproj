@@ -76,6 +76,7 @@
     <Compile Include="Constants.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="GameScreen.cs" />
+    <Compile Include="Items.cs" />
     <Compile Include="MapCell.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

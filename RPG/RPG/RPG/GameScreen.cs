@@ -24,7 +24,8 @@ namespace RPG
         public Enemy[] enemyArray;
         public Enemy enemy;
         Texture2D enemySprite;
-
+        Texture2D diamondSprite;
+        Texture2D heathSprite;
         KeyboardState lastState;
 
         TileMap myMap;
@@ -89,6 +90,27 @@ namespace RPG
                     enemyArray[0] = new Enemy(enemySprite, new Vector2(230 - enemySprite.Width, 200), "Christian Bale");
                     enemyArray[1] = new Enemy(enemySprite, new Vector2(230 - enemySprite.Width, 30), "Samuel L. Jackson");
                     enemyArray[2] = new Enemy(enemySprite, new Vector2(600 - enemySprite.Width, 30), "Spiderman");
+
+                    allDead = false;
+                }
+
+            }
+            if (level == 3)
+            {
+                if (enemyArray[0] == null && enemyArray[1] == null)
+                {
+                    allDead = true;
+                    level = 4;
+                    myMap = new TileMap(level);
+                    player.position = player.startPosition;//go back to start position
+                    player.setHP(-100);//////////DEBUG PURPOSES ONLY
+                    enemyArray = new Enemy[3];
+                    //insert 3 enemies diff positions{enemy};
+////////////////////////////////////////////////////////////////////////////////////EDIT THESES NAMES
+                    enemyArray[0] = new Enemy(enemySprite, new Vector2(230 - enemySprite.Width, 200), "Christian Bale");
+                    enemyArray[1] = new Enemy(enemySprite, new Vector2(230 - enemySprite.Width, 30), "Samuel L. Jackson");
+                    enemyArray[2] = new Enemy(enemySprite, new Vector2(600 - enemySprite.Width, 30), "Spiderman");
+                    enemyArray[3] = new Enemy(enemySprite, new Vector2(600 - enemySprite.Width, 30), "Spiderman");
 
                     allDead = false;
                 }

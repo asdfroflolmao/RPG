@@ -2,13 +2,13 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>Sprites\player.png</Source>
-      <Name>Sprites\player</Name>
+      <Source>Sprites\Player.png</Source>
+      <Name>Sprites\Player</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\player.xnb</Output>
-      <Time>2013-02-05T17:25:29.2879237-05:00</Time>
+      <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\Player.xnb</Output>
+      <Time>2013-04-03T19:10:11.228657-04:00</Time>
     </Item>
     <Item>
       <Source>Scenes\GameScreen.png</Source>
@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\GameScreen.xnb</Output>
-      <Time>2013-04-23T16:25:24.7468501-04:00</Time>
+      <Time>2013-04-05T01:16:44.2422393-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Bar.png</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\Bar.xnb</Output>
-      <Time>2013-04-23T16:25:24.8938585-04:00</Time>
+      <Time>2013-04-06T17:35:42.9221718-04:00</Time>
     </Item>
     <Item>
       <Source>CombatScreen\CombatWin.png</Source>
@@ -35,16 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatScreen\CombatWin.xnb</Output>
-      <Time>2013-04-23T16:25:23.9658054-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Scenes\MainMenu.png</Source>
-      <Name>Scenes\MainMenu</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\MainMenu.xnb</Output>
-      <Time>2013-04-29T14:51:56.5576356-04:00</Time>
+      <Time>2013-04-06T17:35:42.8891699-04:00</Time>
     </Item>
     <Item>
       <Source>Scenes\CombatScreen.png</Source>
@@ -53,16 +44,16 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\CombatScreen.xnb</Output>
-      <Time>2013-04-23T16:25:23.9728058-04:00</Time>
+      <Time>2013-04-06T17:35:42.9201716-04:00</Time>
     </Item>
     <Item>
-      <Source>Sprites\playerSheet.png</Source>
-      <Name>Sprites\playerSheet</Name>
+      <Source>Sprites\PlayerSheet.png</Source>
+      <Name>Sprites\PlayerSheet</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\playerSheet.xnb</Output>
-      <Time>2013-04-25T14:11:24.2041408-04:00</Time>
+      <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\PlayerSheet.xnb</Output>
+      <Time>2013-04-26T12:13:31.6672177-04:00</Time>
     </Item>
     <Item>
       <Source>Textures\tileset.png</Source>
@@ -71,7 +62,34 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Textures\tileset.xnb</Output>
-      <Time>2013-04-28T14:43:28.2109331-04:00</Time>
+      <Time>2013-04-29T19:55:54.6053807-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Scenes\MainMenu.png</Source>
+      <Name>Scenes\MainMenu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\MainMenu.xnb</Output>
+      <Time>2013-04-29T19:55:54.5653784-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Enemy.png</Source>
+      <Name>Sprites\Enemy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\Enemy.xnb</Output>
+      <Time>2013-04-29T19:55:54.6033805-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Diamond32.png</Source>
+      <Name>Sprites\Diamond32</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\Diamond32.xnb</Output>
+      <Time>2013-04-29T19:55:54.6033805-04:00</Time>
     </Item>
     <Item>
       <Source>CombatScreen\menuFont.spritefont</Source>
@@ -80,7 +98,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatScreen\menuFont.xnb</Output>
-      <Time>2013-04-23T16:25:23.9668055-04:00</Time>
+      <Time>2013-04-06T17:35:42.9191716-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -121,7 +139,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2013-01-29T17:39:51.2806072-05:00</Value>
+        <Value>2013-02-03T15:39:08.4229107-05:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

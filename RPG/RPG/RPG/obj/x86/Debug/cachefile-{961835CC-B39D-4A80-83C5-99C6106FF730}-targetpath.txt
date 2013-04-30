@@ -1,11 +1,11 @@
-Content\Sprites\player.xnb
+Content\Sprites\Player.xnb
 Content\Scenes\GameScreen.xnb
 Content\Sprites\Bar.xnb
 Content\CombatScreen\CombatWin.xnb
 Content\Scenes\CombatScreen.xnb
-Content\Sprites\playerSheet.xnb
+Content\Sprites\PlayerSheet.xnb
 Content\Textures\tileset.xnb
 Content\Scenes\MainMenu.xnb
-Content\CombatScreen\menuFont.xnb
 Content\Sprites\Enemy.xnb
 Content\Sprites\Diamond32.xnb
+Content\CombatScreen\menuFont.xnb
