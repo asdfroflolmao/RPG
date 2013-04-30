@@ -37,3 +37,9 @@ C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\GameScreen\L
 C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\GameScreen\LevelTwoTut.xnb
 C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\FinalBossWinScreen.xnb
 C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatScreen\CombatLost.xnb
+C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\HealthPot32.xnb
+C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\GameScreen\LevelOneTut.xnb
+C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\GameScreen\LevelTwoTut.xnb
+C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatScreen\CombatLost.xnb
+C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatScreen\FinalBossWinScreen.xnb
+C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\EnemyBoss.xnb

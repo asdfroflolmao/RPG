@@ -9,8 +9,9 @@ Content\Scenes\MainMenu.xnb
 Content\Sprites\Enemy.xnb
 Content\Sprites\Diamond32.xnb
 Content\Sprites\HealthPot32.xnb
-Content\CombatScreen\menuFont.xnb
 Content\GameScreen\LevelOneTut.xnb
 Content\GameScreen\LevelTwoTut.xnb
-Content\Scenes\FinalBossWinScreen.xnb
 Content\CombatScreen\CombatLost.xnb
+Content\CombatScreen\menuFont.xnb
+Content\CombatScreen\FinalBossWinScreen.xnb
+Content\Sprites\EnemyBoss.xnb

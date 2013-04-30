@@ -24,6 +24,7 @@ namespace RPG
         public Enemy[] enemyArray;
         public Enemy enemy;
         Texture2D enemySprite;
+        Texture2D enemyBOSSSprite;
         Texture2D diamondSprite;
         Texture2D healthSprite;
         Texture2D levelOneTut;
@@ -48,6 +49,7 @@ namespace RPG
             playerSprite = game.Content.Load<Texture2D>(@"Sprites\PlayerSheet");
             player = new Player(playerSprite);
             enemySprite = game.Content.Load<Texture2D>(@"Sprites\Enemy");
+            enemyBOSSSprite = game.Content.Load<Texture2D>(@"Sprites\EnemyBoss");
             enemy = new Enemy(enemySprite, new Vector2(390 - enemySprite.Width, 70), "Tinky Winky");
             enemyArray = new Enemy[1] { enemy };
             Tile.TileSetTexture = game.Content.Load<Texture2D>(@"Textures\tileset");
@@ -113,24 +115,48 @@ namespace RPG
             }
             if (level == 3) //exists 1 health pot on map. 3 enemies, 3 diamond drop
             {
-                if (enemyArray[0] == null && enemyArray[1] == null)
+                if (enemyArray[0] == null && enemyArray[1] == null && enemyArray[2] == null)
                 {
                     allDead = true;
                     level = 4;
                     myMap = new TileMap(level);
                     player.position = player.startPosition;//go back to start position
                     //player.setHP(-100);//////////DEBUG PURPOSES ONLY
-                    enemyArray = new Enemy[3];
-                    //insert 3 enemies diff positions{enemy};
-
+                    enemyArray = new Enemy[4];
                     ////////////////////////////////////////////////////////////////////////////////////EDIT THESES NAMES
-                    enemyArray[0] = new Enemy(enemySprite, new Vector2(230 - enemySprite.Width, 200), "Christian Bale");
+                    enemyArray[0] = new Enemy(enemyBOSSSprite, new Vector2(230 - enemySprite.Width, 200), "Christian Bale");
                     enemyArray[1] = new Enemy(enemySprite, new Vector2(230 - enemySprite.Width, 30), "Samuel L. Jackson");
                     enemyArray[2] = new Enemy(enemySprite, new Vector2(600 - enemySprite.Width, 30), "Spiderman");
+                    enemyArray[3] = new Enemy(enemySprite, new Vector2(600 - enemySprite.Width, 30), "Superman");
 
                     allDead = false;
                 }
 
+            }
+            if (level == 4) //exists 1 health pot on map. 4 enemies, 4 diamond drop
+            {
+                if (enemyArray[0] == null && enemyArray[1] == null)
+                {
+                    allDead = true;
+                    level = 5;
+                    myMap = new TileMap(level);
+                    player.position.X = Constants.gameWindowWidth / 2 - playerSprite.Width / 2;//go back to start position
+                    player.position.Y = (float)(Constants.gameWindowHeight * 0.75) - playerSprite.Height / 2;
+                    //player.setHP(-100);//////////DEBUG PURPOSES ONLY
+                    enemyArray = new Enemy[1];
+                    ////////////////////////////////////////////////////////////////////////////////////EDIT THESES NAMES
+                    enemyArray[0] = new Enemy(enemyBOSSSprite, new Vector2(Constants.gameWindowWidth / 2 - enemySprite.Width, 300), "BOSSMAN");
+
+                    allDead = false;
+                }
+
+            }
+            if (level == 5)
+            {
+                if (enemyArray[0] == null)
+                {
+                    ;// diamond drop
+                }
             }
             for (int j = 0; j < enemyArray.Length; j++)
             {

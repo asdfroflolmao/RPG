@@ -128,13 +128,22 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Scenes\FinalBossWinScreen.png">
+    <Compile Include="CombatScreen\CombatLost.png">
+      <Name>CombatLost</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CombatScreen\FinalBossWinScreen.png">
       <Name>FinalBossWinScreen</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="CombatScreen\CombatLost.png">
-      <Name>CombatLost</Name>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sprites\EnemyBoss.png">
+      <Name>EnemyBoss</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

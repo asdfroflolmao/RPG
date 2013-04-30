@@ -8,7 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\Player.xnb</Output>
-      <Time>2013-04-29T22:50:01.4959086-04:00</Time>
+      <Time>2013-02-05T17:25:29.2879237-05:00</Time>
     </Item>
     <Item>
       <Source>Scenes\GameScreen.png</Source>
@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\GameScreen.xnb</Output>
-      <Time>2013-04-29T22:50:01.4909083-04:00</Time>
+      <Time>2013-04-23T16:25:24.7468501-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Bar.png</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\Bar.xnb</Output>
-      <Time>2013-04-29T22:50:01.4939085-04:00</Time>
+      <Time>2013-04-23T16:25:24.8938585-04:00</Time>
     </Item>
     <Item>
       <Source>CombatScreen\CombatWin.png</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatScreen\CombatWin.xnb</Output>
-      <Time>2013-04-29T22:50:01.4819078-04:00</Time>
+      <Time>2013-04-23T16:25:23.9658054-04:00</Time>
     </Item>
     <Item>
       <Source>Scenes\CombatScreen.png</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\CombatScreen.xnb</Output>
-      <Time>2013-04-29T22:50:01.4879082-04:00</Time>
+      <Time>2013-04-23T16:25:23.9728058-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\PlayerSheet.png</Source>
@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\PlayerSheet.xnb</Output>
-      <Time>2013-04-29T22:50:01.4959086-04:00</Time>
+      <Time>2013-04-25T14:11:24.2041408-04:00</Time>
     </Item>
     <Item>
       <Source>Textures\tileset.png</Source>
@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Textures\tileset.xnb</Output>
-      <Time>2013-04-29T22:50:01.4969087-04:00</Time>
+      <Time>2013-04-28T14:43:28.2109331-04:00</Time>
     </Item>
     <Item>
       <Source>Scenes\MainMenu.png</Source>
@@ -71,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\MainMenu.xnb</Output>
-      <Time>2013-04-29T22:50:01.4919084-04:00</Time>
+      <Time>2013-04-29T14:51:56.5576356-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Enemy.png</Source>
@@ -80,7 +80,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\Enemy.xnb</Output>
-      <Time>2013-04-29T22:50:01.4939085-04:00</Time>
+      <Time>2013-04-29T23:45:01.7824297-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Diamond32.png</Source>
@@ -89,16 +89,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\Diamond32.xnb</Output>
-      <Time>2013-04-29T22:50:01.4939085-04:00</Time>
-    </Item>
-    <Item>
-      <Source>CombatScreen\menuFont.spritefont</Source>
-      <Name>CombatScreen\menuFont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatScreen\menuFont.xnb</Output>
-      <Time>2013-04-29T22:50:01.484908-04:00</Time>
+      <Time>2013-04-29T23:45:01.7794295-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\HealthPot32.png</Source>
@@ -107,7 +98,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\HealthPot32.xnb</Output>
-      <Time>2013-04-29T22:50:01.4939085-04:00</Time>
+      <Time>2013-04-29T23:45:01.7834297-04:00</Time>
     </Item>
     <Item>
       <Source>GameScreen\LevelOneTut.png</Source>
@@ -116,7 +107,52 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\GameScreen\LevelOneTut.xnb</Output>
-      <Time>2013-04-29T22:50:01.485908-04:00</Time>
+      <Time>2013-04-29T23:45:01.7734292-04:00</Time>
+    </Item>
+    <Item>
+      <Source>GameScreen\LevelTwoTut.png</Source>
+      <Name>GameScreen\LevelTwoTut</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\GameScreen\LevelTwoTut.xnb</Output>
+      <Time>2013-04-30T00:34:37.6706408-04:00</Time>
+    </Item>
+    <Item>
+      <Source>CombatScreen\CombatLost.png</Source>
+      <Name>CombatScreen\CombatLost</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatScreen\CombatLost.xnb</Output>
+      <Time>2013-04-30T02:04:40.7326782-04:00</Time>
+    </Item>
+    <Item>
+      <Source>CombatScreen\menuFont.spritefont</Source>
+      <Name>CombatScreen\menuFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatScreen\menuFont.xnb</Output>
+      <Time>2013-04-23T16:25:23.9668055-04:00</Time>
+    </Item>
+    <Item>
+      <Source>CombatScreen\FinalBossWinScreen.png</Source>
+      <Name>CombatScreen\FinalBossWinScreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatScreen\FinalBossWinScreen.xnb</Output>
+      <Time>2013-04-30T02:04:30.8481129-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\EnemyBoss.png</Source>
+      <Name>Sprites\EnemyBoss</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\EnemyBoss.xnb</Output>
+      <Time>2013-04-30T02:07:44.7872055-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -157,7 +193,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2013-02-03T15:39:08.4229107-05:00</Value>
+        <Value>2013-01-29T17:39:51.2806072-05:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>
