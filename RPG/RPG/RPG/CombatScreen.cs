@@ -186,9 +186,11 @@ namespace RPG
                 spriteBatch.DrawString(menufont, "Enemy: " + enemy.GetName(), new Vector2(450, 150), Color.White);
                 spriteBatch.DrawString(menufont, "HP: " + enemy.GetHealth(), new Vector2(450, 175), Color.White);
                 //spriteBatch.DrawString(menufont, "MP: " + enemy.getMANA(), new Vector2(game.GraphicsDevice.Viewport.Width / 2-50, game.GraphicsDevice.Viewport.Height / 2-300), Color.White);
-                
+
                 if (!enemy.IsBoss())
                     spriteBatch.Draw(enemySprite, new Rectangle(460, 250, 105, 155), Color.White);
+                else
+                    spriteBatch.Draw(enemySprite, new Rectangle(400, 220, 288, 288), Color.White);
                 
 
                 //*****PLAYER STATS*****//
