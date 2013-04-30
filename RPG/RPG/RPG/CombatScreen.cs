@@ -16,13 +16,15 @@ namespace RPG
     {
         private Game1 game;
         private Texture2D texture;
-        private Texture2D combatWin;        
+        private Texture2D combatWin;
+        private Texture2D combatLost;        
         private KeyboardState lastState;
         SpriteFont menufont;
         int activeItem = 0;
         Player player;
         Enemy enemy;
         private bool playerWon = false;
+        private bool playerLost = false;
         
         
         /// <summary>
@@ -54,6 +56,7 @@ namespace RPG
             menufont = game.Content.Load<SpriteFont>(@"CombatScreen\menuFont");
             healthTexture = game.Content.Load<Texture2D>(@"Sprites\Bar");
             combatWin = game.Content.Load<Texture2D>(@"CombatScreen\CombatWin");
+            combatLost = game.Content.Load<Texture2D>(@"CombatScreen\CombatLost");
             lastState = Keyboard.GetState();
             
             player = igplayer;
@@ -89,9 +92,10 @@ namespace RPG
             if (player.getHP() <= 0)
             {
                 //Game over?
+                playerLost = true;
                 if (keyboardState.IsKeyDown(Keys.Enter) && lastState.IsKeyUp(Keys.Enter))
                 {
-                    game.CombatEnd(); //Battle LOST
+                    game.Reset(); //Battle LOST
                 }
             }
 
@@ -144,6 +148,12 @@ namespace RPG
             {
                 spriteBatch.Draw(combatWin, Vector2.Zero, Color.White);
             }
+
+            if (playerLost)
+            {
+                spriteBatch.Draw(combatLost, Vector2.Zero, Color.White);
+            }
+
             else
             {
                 if (texture != null)

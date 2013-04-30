@@ -172,5 +172,11 @@ namespace RPG
             currentScreen = Screen.GameScreen;
             startScreen = null;
         }
+
+        public void Reset()
+        {
+            startScreen = new StartScreen(this);
+            currentScreen = Screen.StartScreen;
+        }
     }
 }
