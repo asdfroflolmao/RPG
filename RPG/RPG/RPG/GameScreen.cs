@@ -59,7 +59,7 @@ namespace RPG
             diamondSprite = game.Content.Load<Texture2D>(@"Sprites\Diamond32");
             healthSprite = game.Content.Load<Texture2D>(@"Sprites\HealthPot32");
 
-            Game1.MessageBox(new IntPtr(0), "This is a sample message box! Go fuck yourself Albert. :D", "Sample", 0);
+            //Game1.MessageBox(new IntPtr(0), "This is a sample message box! Test test! :D", "Test Title", 0);
         }
 
         public void Update(GameTime gameTime)
