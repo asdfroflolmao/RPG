@@ -45,3 +45,4 @@ C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Spr
 C:\Users\Albert Chung\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\FinalBossWinScreen.xnb
 C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\FinalBossWinScreen.xnb
 C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\BossDiamond.xnb
+C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\obj\x86\Debug\RPG.csprojResolveAssemblyReference.cache

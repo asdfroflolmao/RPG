@@ -8,7 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\Player.xnb</Output>
-      <Time>2013-04-29T16:14:29.4723854-04:00</Time>
+      <Time>2013-04-04T22:11:23.679889-04:00</Time>
     </Item>
     <Item>
       <Source>Scenes\GameScreen.png</Source>
@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\GameScreen.xnb</Output>
-      <Time>2013-04-29T16:14:29.4673851-04:00</Time>
+      <Time>2013-04-04T23:50:28.2979017-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Bar.png</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\Bar.xnb</Output>
-      <Time>2013-04-29T16:14:29.4713854-04:00</Time>
+      <Time>2013-04-05T14:39:45.0852459-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\PlayerSheet.png</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\PlayerSheet.xnb</Output>
-      <Time>2013-04-29T16:14:29.4723854-04:00</Time>
+      <Time>2013-04-28T14:23:36.9945279-04:00</Time>
     </Item>
     <Item>
       <Source>Textures\tileset.png</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Textures\tileset.xnb</Output>
-      <Time>2013-04-29T16:14:29.4743855-04:00</Time>
+      <Time>2013-04-28T18:13:14.8278805-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Enemy.png</Source>
@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\Enemy.xnb</Output>
-      <Time>2013-04-30T10:35:41.5409701-04:00</Time>
+      <Time>2013-05-01T20:50:31.0969707-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Diamond32.png</Source>
@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\Diamond32.xnb</Output>
-      <Time>2013-04-29T17:02:32.322275-04:00</Time>
+      <Time>2013-04-29T19:57:14.4331943-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\HealthPot32.png</Source>
@@ -71,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\HealthPot32.xnb</Output>
-      <Time>2013-04-30T10:35:41.5419702-04:00</Time>
+      <Time>2013-04-29T21:37:31.5693548-04:00</Time>
     </Item>
     <Item>
       <Source>GameScreen\LevelOneTut.png</Source>
@@ -80,7 +80,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\GameScreen\LevelOneTut.xnb</Output>
-      <Time>2013-04-30T10:35:41.53797-04:00</Time>
+      <Time>2013-04-29T21:39:34.4443828-04:00</Time>
     </Item>
     <Item>
       <Source>GameScreen\LevelTwoTut.png</Source>
@@ -89,7 +89,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\GameScreen\LevelTwoTut.xnb</Output>
-      <Time>2013-04-30T10:35:41.53897-04:00</Time>
+      <Time>2013-04-30T00:26:53.8876061-04:00</Time>
     </Item>
     <Item>
       <Source>Scenes\FinalBossWinScreen.png</Source>
@@ -98,7 +98,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\FinalBossWinScreen.xnb</Output>
-      <Time>2013-04-30T15:19:15.9839447-04:00</Time>
+      <Time>2013-04-30T00:59:59.4551741-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\EnemyBoss.png</Source>
@@ -107,7 +107,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\EnemyBoss.xnb</Output>
-      <Time>2013-04-30T10:35:41.5409701-04:00</Time>
+      <Time>2013-05-01T20:50:31.0969707-04:00</Time>
     </Item>
     <Item>
       <Source>CombatScreen\CombatWin.png</Source>
@@ -116,7 +116,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatScreen\CombatWin.xnb</Output>
-      <Time>2013-04-30T10:51:10.7791195-04:00</Time>
+      <Time>2013-05-01T20:50:31.0909703-04:00</Time>
     </Item>
     <Item>
       <Source>CombatScreen\CombatLost.png</Source>
@@ -125,7 +125,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatScreen\CombatLost.xnb</Output>
-      <Time>2013-04-30T11:04:52.7111313-04:00</Time>
+      <Time>2013-05-01T20:50:31.0899703-04:00</Time>
     </Item>
     <Item>
       <Source>Scenes\CombatScreen.png</Source>
@@ -134,7 +134,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\CombatScreen.xnb</Output>
-      <Time>2013-04-30T13:51:46.863846-04:00</Time>
+      <Time>2013-05-01T20:50:31.0919704-04:00</Time>
     </Item>
     <Item>
       <Source>Scenes\MainMenu.png</Source>
@@ -143,7 +143,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Scenes\MainMenu.xnb</Output>
-      <Time>2013-04-30T14:07:41.9904761-04:00</Time>
+      <Time>2013-05-01T20:50:31.0959706-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\BossDiamond.png</Source>
@@ -152,7 +152,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\Sprites\BossDiamond.xnb</Output>
-      <Time>2013-04-30T13:58:39.5894526-04:00</Time>
+      <Time>2013-05-01T20:50:31.0959706-04:00</Time>
     </Item>
     <Item>
       <Source>CombatScreen\menuFont.spritefont</Source>
@@ -161,7 +161,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Yan\Documents\GitHub\RPG\RPG\RPG\RPG\bin\x86\Debug\Content\CombatScreen\menuFont.xnb</Output>
-      <Time>2013-04-29T16:14:29.4613848-04:00</Time>
+      <Time>2013-04-05T14:12:39.9632942-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -201,7 +201,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2013-01-31T16:43:08.6519474-05:00</Value>
+        <Value>2013-02-09T16:43:24.3335077-05:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>
